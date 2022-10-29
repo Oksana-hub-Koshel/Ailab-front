@@ -1,0 +1,217 @@
+
+.footer {
+  background: black;
+  color: white;
+}
+
+.container {
+  max-width: 1320px;
+  background: black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-right: var(--bs-gutter-x, .75rem);
+  padding-left: var(--bs-gutter-x, .75rem);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5vw;
+  padding-top: 2vw;
+  padding-bottom: 5vw;
+}
+
+.row {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  gap: 150px;
+  row-gap: 50px;
+
+
+}
+
+.first_block {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.text {
+  text-align: justify;
+}
+
+.icons_contacts {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.icon_instagram_left {
+  transform: rotate(180deg);
+  transform: scale(1, -1)
+}
+
+.icon_facebook_left {
+  transform: rotate(180deg);
+  transform: scale(1, -1)
+}
+
+.icon_telegram_left {
+  transform: rotate(180deg);
+  transform: scale(1, -1)
+}
+
+.logo_image {
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.second_block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+
+}
+
+.services_block {
+
+}
+
+.services_links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.second_block h3 {
+  border-bottom: 2px solid #b69d74;
+}
+
+.third_block {
+  margin-top: 5px;
+}
+
+.third_block h3 {
+  border-bottom: 2px solid #b69d74;
+}
+
+.fourth_block h3 {
+  border-bottom: 2px solid #b69d74;
+}
+
+.fourth_block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+
+}
+
+.contacts_links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-items: left;
+
+}
+
+.quick_links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-items: left;
+
+}
+
+.phone_icon_and_text {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.icon_telephone {
+  transform: rotate(180deg);
+  color: #b69d74;
+}
+
+.insta_icon_and_text {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.icon_insta {
+  transform: rotate(180deg);
+  color: #b69d74;
+  transform: scale(1, -1)
+}
+
+.email_icon_and_text {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  cursor: pointer;
+  align-items: center;
+
+
+}
+
+.icon_email {
+  transform: rotate(180deg);
+  color: #b69d74;
+
+}
+
+.icon_arrow {
+  width: 15px;
+}
+
+.links_items {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.links_items a {
+  text-decoration: none;
+  color: white
+}
+
+.copyrights {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  color: darkgrey;
+}
+
+.author_contacts {
+  display: flex;
+  /*width: 50%;*/
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.author_telegram {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}

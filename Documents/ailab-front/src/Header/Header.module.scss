@@ -1,0 +1,115 @@
+.navbar_wrapper {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  padding: 0 30px;
+  border: 0;
+  background: none;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 20px;
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    box-shadow: 0 0.75rem 1.25rem 0.0625rem rgb(230, 224, 224);
+  }
+}
+
+.logo {
+  & a {
+    display: block;
+    width: 127px;
+    color: #343b43;
+    margin-right: 0.25rem !important;
+  }
+
+  & a img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+}
+
+.navbar_items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+
+  & a {
+    display: block;
+    position: relative;
+    height: 44px;
+    padding: 0 0.9375rem;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    color: #343b43;
+    font-size: .8125rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    line-height: 44px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  width: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
+  position: relative;
+  height: 44px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border: 0;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  cursor: pointer;
+  z-index: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+
+  & a {
+    color: #fff;
+    margin-left: -5px;
+  }
+
+  & div svg {
+    height: 20px;
+    width: 20px;
+    margin-left: 15px;
+    color: white;
+  }
+}
+
+.teleg_icon {
+  color: white;
+
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+}
+
+.teleg {
+  margin-right: 5px;
+}
+
+.peace {
+  margin-right: 5px;
+}
+
+
+
