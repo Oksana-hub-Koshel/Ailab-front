@@ -1,9 +1,157 @@
 import s from "./Order.module.scss";
 import hero from "./../../Data/HomePage/hero.png"
 import {HiOutlineArrowDown} from "react-icons/hi";
+import $ from "jquery";
+import Typed from "react-typed";
 
+
+$(function () {
+    const target_block = $(".number"); // Ищем блок
+    const value = target_block.text()
+    let blockStatus = true;
+
+    $(window).scroll(function () {
+
+        const scrollEvent = ($(window).scrollTop() > (target_block.position().top - $(window).height()));
+
+        if (scrollEvent && blockStatus) {
+
+            blockStatus = false; // Запрещаем повторное выполнение функции до следующей перезагрузки страницы.
+
+            $({numberValue: 0}).animate({numberValue: value}, {
+
+                duration: 2000, // Продолжительность анимации, где 500 - 0.5 одной секунды, то есть 500 миллисекунд
+                easing: "linear",
+
+                step: function (val) {
+
+                    $(".number").html(Math.ceil(val)); // Блок, где необходимо сделать анимацию
+
+                }
+
+            });
+
+        }
+
+    });
+
+});
+$(function () {
+    const target_block = $(".numb"); // Ищем блок
+    const value1 = target_block.text()
+    let blockStatus = true;
+
+    $(window).scroll(function () {
+
+        const scrollEvent = ($(window).scrollTop() > (target_block.position().top - $(window).height()));
+
+        if (scrollEvent && blockStatus) {
+
+            blockStatus = false; // Запрещаем повторное выполнение функции до следующей перезагрузки страницы.
+
+            $({numberValue: 0}).animate({numberValue: value1}, {
+
+                duration: 2000, // Продолжительность анимации, где 500 - 0.5 одной секунды, то есть 500 миллисекунд
+                easing: "linear",
+
+                step: function (val) {
+
+                    $(".numb").html(Math.ceil(val)); // Блок, где необходимо сделать анимацию
+
+                }
+
+            });
+
+        }
+
+    });
+
+});
+$(function () {
+    const target_block = $(".num"); // Ищем блок
+    const value = target_block.text()
+    let blockStatus = true;
+
+    $(window).scroll(function () {
+
+        const scrollEvent = ($(window).scrollTop() > (target_block.position().top - $(window).height()));
+
+        if (scrollEvent && blockStatus) {
+
+            blockStatus = false; // Запрещаем повторное выполнение функции до следующей перезагрузки страницы.
+
+            $({numberValue: 0}).animate({numberValue: value}, {
+
+                duration: 2000, // Продолжительность анимации, где 500 - 0.5 одной секунды, то есть 500 миллисекунд
+                easing: "linear",
+
+                step: function (val) {
+
+                    $(".num").html(Math.ceil(val)); // Блок, где необходимо сделать анимацию
+
+                }
+
+            });
+
+        }
+
+    });
+
+});
+$(function () {
+    const target_block = $(".nu"); // Ищем блок
+    const value = target_block.text()
+    let blockStatus = true;
+
+    $(window).scroll(function () {
+
+        const scrollEvent = ($(window).scrollTop() > (target_block.position().top - $(window).height()));
+
+        if (scrollEvent && blockStatus) {
+
+            blockStatus = false; // Запрещаем повторное выполнение функции до следующей перезагрузки страницы.
+
+            $({numberValue: 0}).animate({numberValue: value}, {
+
+                duration: 2000, // Продолжительность анимации, где 500 - 0.5 одной секунды, то есть 500 миллисекунд
+                easing: "linear",
+
+                step: function (val) {
+
+                    $(".nu").html(Math.ceil(val)); // Блок, где необходимо сделать анимацию
+
+                }
+
+            });
+
+        }
+
+    });
+
+});
+
+$(function () {
+
+    $("#typing").typed({
+        strings: [" В Африке гориллы.", " В Африке большие.", " Злые крокодилы."],
+        typeSpeed: 70,
+        backDelay: 1500,
+        startDelay: 2500,
+        loop: true,
+        loopCount: 2,
+        contentType: 'html',
+    });
+
+});
 
 export const Order = () => {
+    const textLines = [
+        `Веб приложений`,
+        `сайтов на <br/> Wordpress`,
+        `E-commerce <br/> решений`,
+        `Сайтов на Tilda`
+    ];
+
     return (
         <>
             <div className={s.container}>
@@ -14,10 +162,10 @@ export const Order = () => {
 
                 </div>
                 <div className={s.right_side}>
-
-                    <h1 className={s.title}>
-                        Мы лучше в<br/> создании
+                    <h1 className={s.title}> Мы лучше в<br/> создании<br/>
+                        <span> <Typed strings={textLines} typeSpeed={60}/></span>
                     </h1>
+
 
                     <p>
                         Проектируем бизнес-процессы, интерфейсы и<br/> техническую архитектуру веб-проектов под<br/>
@@ -42,23 +190,23 @@ export const Order = () => {
             <div className={s.container2}>
                 <div className={s.row}>
                     <div className={s.block_item}>
-                        <h5>350+</h5>
+                        <h5 className="number">350</h5>
                         <p>Завершенных проектов</p>
                         <hr className={s.line}/>
 
                     </div>
                     <div className={s.block_item}>
-                        <h5>92%</h5>
+                        <h5 className="numb">92</h5>
                         <p>Позитывных отзывов</p>
                         <hr className={s.line}/>
                     </div>
                     <div className={s.block_item}>
-                        <h5>1446</h5>
+                        <h5 className="num">1446</h5>
                         <p>Готовых кейсов</p>
                         <hr className={s.line}/>
                     </div>
                     <div className={s.block_item}>
-                        <h5>28</h5>
+                        <h5 className="nu">28</h5>
                         <p>Количество сотрудников</p>
                         <hr className={s.line}/>
                     </div>
@@ -67,4 +215,5 @@ export const Order = () => {
         </>
 
     )
+
 }

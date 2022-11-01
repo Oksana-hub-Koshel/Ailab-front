@@ -46,6 +46,10 @@
     letter-spacing: .021em;
     font-size: 3rem;
 
+    span {
+      color: #62707f;
+    }
+
 
   }
 
@@ -153,5 +157,49 @@
   width: 36px;
   background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
   height: 1px;
+
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    margin-top: 20vw;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .right_side {
+    order: -1;
+    margin-left: 2vw;
+
+    h1 {
+      font-size: 8vw;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+  .left_side {
+    order: 1;
+  }
+  .btn_order {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .left_side {
+    margin-top: 5vw;
+  }
+  .container2 {
+    width: 80%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+  .block_item {
+    width: 100%;
+    border-left: 1px solid #e7e7e7 !important;
+  }
 
 }

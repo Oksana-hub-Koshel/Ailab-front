@@ -64,3 +64,24 @@
     padding-left: 2vw;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .wrapper {
+    width: 100%;
+    padding-left: 0px;
+
+    h2 {
+      font-size: 5vw;
+      margin-right: 4vw;
+      margin-left: 4vw;
+    }
+  }
+  .blocks {
+    margin-left: 0px;
+    margin-right: 0px;
+    justify-content: center;
+  }
+  .block {
+    width: 40%;
+  }
+}

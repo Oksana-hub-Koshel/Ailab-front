@@ -1,0 +1,247 @@
+.container {
+  width: 1170px;
+  padding-top: 13vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.title {
+  align-self: center !important;
+  min-height: 150px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 3.5rem;
+  padding-top: 5vw;
+  padding-bottom: 1.875rem;
+  background-position: center center;
+  background-color: #f5f5f5;
+  background-image: url("./../Data/portfolio/portfolio-pattern.png");
+  background-repeat: no-repeat;
+
+  div {
+    text-align: left !important;
+  }
+}
+
+.breadcrump {
+
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+
+  div {
+    color: #ac32e4;
+  }
+
+  div a {
+    text-decoration: none;
+    color: #ac32e4;
+    letter-spacing: 0.2vw;
+    font-size: .6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+
+}
+
+.title_center {
+  align-self: center !important;
+
+  h1 {
+    font-size: 40px;
+    letter-spacing: 0.4vw;
+    line-height: 1.2;
+    text-shadow: 0 0.625rem 1.5rem rgb(149, 138, 138);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: #343b43;
+    font-weight: 900;
+    margin-top: 1vw;
+  }
+}
+
+.content {
+  width: 1170px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px
+}
+
+/*Card1*/
+
+.item1 {
+  width: 49%;
+
+  margin-bottom: 30px;
+  animation: showGrid .6s;
+}
+
+.card {
+  border: 0;
+  box-shadow: 0 0.75rem 1.25rem 0.0625rem rgb(213, 207, 207);
+  text-decoration: none;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  position: relative;
+
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: -0.625rem;
+    left: 1.25rem;
+    width: calc(100% - 2.5rem);
+    height: 2.1875rem;
+    background-color: #fff;
+    box-shadow: 0 1.1875rem 1.75rem 0.3125rem rgb(153, 149, 149);
+    content: '';
+    z-index: -1;
+
+  }
+}
+
+.image_block img {
+  width: 100%;
+}
+
+.card_body {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1 1 auto;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+
+  .card_title {
+    display: block;
+    position: relative;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.625rem;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    color: #343b43;
+    font-weight: 900;
+    letter-spacing: .021em;
+    font-family: "Montserrat", sans-serif;
+
+    &:after {
+      background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: -0.5rem;
+      width: 40px;
+      height: 2px;
+      box-shadow: none;
+      content: '';
+    }
+  }
+
+  .descrip {
+    color: #8c8c8c !important;
+  }
+
+  .tag_links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+
+    .tag_link {
+      display: inline-block;
+      position: relative;
+      margin-top: 0.3125rem;
+      margin-right: 0.375rem;
+      margin-bottom: 0.3125rem;
+      padding: 0.3125rem 0.75rem;
+      -webkit-transition: color .25s;
+      transition: color .25s;
+      background-color: #fff;
+      color: #404040;
+      font-size: .6875rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0.75rem 1.25rem 0.0625rem rgb(179, 175, 175);
+      z-index: 1;
+    }
+  }
+
+}
+
+.card_footer {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  background-color: #fff;
+  border-top: 1px solid #e7e7e7;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
+  .left_side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px
+
+  }
+}
+
+.author_foto {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.author_name {
+  transition: opacity .25s;
+  color: #8c8c8c;
+  font-size: 1vw;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: .7;
+}
+
+.post_meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity .25s;
+  color: #8c8c8c;
+  font-size: 1vw;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: .7;
+
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 5px
+  }
+
+  & span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+
+
+
+
+
