@@ -147,8 +147,8 @@ $(function () {
 export const Order = () => {
     const textLines = [
         `Веб приложений`,
-        `сайтов на <br/> Wordpress`,
-        `E-commerce <br/> решений`,
+        `сайтов на  Wordpress`,
+        `E-commerce решений`,
         `Сайтов на Tilda`
     ];
 
@@ -162,16 +162,16 @@ export const Order = () => {
 
                 </div>
                 <div className={s.right_side}>
-                    <h1 className={s.title}> Мы лучше в<br/> создании<br/>
+                    <h1 className={s.title}> Мы лучше в создании<br/>
                         <span> <Typed strings={textLines} typeSpeed={60}/></span>
                     </h1>
 
 
                     <p>
-                        Проектируем бизнес-процессы, интерфейсы и<br/> техническую архитектуру веб-проектов под<br/>
-                        ваши уникальные потребности.<br/> Разрабатываем серверные API:<br/>
-                        <span className={s.css_typing}>Django Rest Framework, Django, Laravel, MySQL.</span><br/>
-                        Верстаем и программируем интерфейсы:<br/>
+                        Проектируем бизнес-процессы, интерфейсы и техническую архитектуру веб-проектов под
+                        ваши уникальные потребности. Разрабатываем серверные API:
+                        <span className={s.css_typing}>Django Rest Framework, Django, Laravel, MySQL.</span>
+                        Верстаем и программируем интерфейсы:
                         <span>JavaScript, TypeScript, Vue и React, Next.js.</span>
                     </p>
 
@@ -190,13 +190,14 @@ export const Order = () => {
             <div className={s.container2}>
                 <div className={s.row}>
                     <div className={s.block_item}>
-                        <h5 className="number">350</h5>
+                        <div><h5 className="number">350</h5><h5>+</h5></div>
+
                         <p>Завершенных проектов</p>
                         <hr className={s.line}/>
 
                     </div>
                     <div className={s.block_item}>
-                        <h5 className="numb">92</h5>
+                        <div><h5 className="numb">92</h5><h5>%</h5></div>
                         <p>Позитывных отзывов</p>
                         <hr className={s.line}/>
                     </div>

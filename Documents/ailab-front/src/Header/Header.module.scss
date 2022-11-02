@@ -5,6 +5,7 @@
     width: 10vw;
     color: #343b43;
     margin-right: 0.25rem !important;
+    margin-left: 2vw;
   }
 
   & a img {
@@ -26,24 +27,24 @@
   height: 4vw;
   transform: translateZ(0);
   border: 0;
-  letter-spacing: .1em;
+  letter-spacing: 0.1vw;
   cursor: pointer;
   z-index: 1;
   text-transform: uppercase;
   text-decoration: none;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+  margin-right: 2vw;
+  gap: 0.5vw;
 
   & a {
     color: #fff;
-    margin-left: -0.3vw;
-    font-size: 1vw;
+    font-size: 0.8vw;
   }
 
   & div svg {
-    height: 1.2vw;
-    width: 1.2vw;
-    //margin-left: 1vw;
+    height: 1vw;
+    width: 1vw;
     color: white;
   }
 }
@@ -75,62 +76,38 @@
 
 
 @media screen and (min-width: 1170px) {
+  .icon_menu {
+    display: none;
+  }
   .logo {
     & a {
-      display: block;
+
       width: 127px;
       margin-left: 20px;
-      color: #343b43;
-      margin-right: 0.25rem !important;
+
     }
 
-    & a img {
-      max-width: 100%;
-      height: auto;
-      vertical-align: middle;
-    }
 
   }
 
   .btn {
     width: 200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
-    position: relative;
     height: 44px;
-    margin-right: 2vw;
+    margin-right: 30px;
     gap: 8px;
-    transform: translateZ(0);
-    border: 0;
-    letter-spacing: .1em;
-    cursor: pointer;
-    z-index: 1;
-    text-transform: uppercase;
-    text-decoration: none;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
+
 
     & a {
-      color: #fff;
-      margin-left: -5px;
+
       font-size: 13px;
     }
 
     & div svg {
       height: 15px;
       width: 15px;
-      color: white;
+
     }
   }
-
-  .teleg_icon {
-    color: white;
-
-  }
-
 
   .teleg {
     margin-right: 5px;
@@ -145,8 +122,9 @@
   }
 }
 
-@media screen and (max-width: 550px) {
 
+@media screen and (max-width: 800px) {
+ 
   .menu_item {
     display: none;
   }
@@ -156,9 +134,7 @@
   .logo a {
     width: 20vw;
   }
-  .logo a img {
-    margin-left: 2vw;
-  }
+
   .items {
     display: none;
   }

@@ -16,10 +16,10 @@ export const Header = () => {
         setIsOpen(true);
     }
     return (
-        <div>
+        <>
             <div className="container container--1">
 
-                <nav role="navigation">
+                <nav role="navigation" className={s.nav}>
                     <div id="menuToggle">
 
                         <input type="checkbox"/>
@@ -30,21 +30,19 @@ export const Header = () => {
                         <span></span>
 
                         <ul id="menu">
-                            <a href="#">
-                                <li>Home</li>
-                            </a>
-                            <a href="#">
-                                <li>About</li>
-                            </a>
-                            <a href="#">
-                                <li>Info</li>
-                            </a>
-                            <a href="#">
-                                <li>Contact</li>
-                            </a>
-                            <a href="https://erikterwan.com/" target="_blank" rel="noreferrer">
-                                <li>Show me more</li>
-                            </a>
+                            <Link to="/">
+                                <li>Главная</li>
+                            </Link>
+                            <Link to="/portfolio">
+                                <li>Портфолио</li>
+                            </Link>
+                            <Link to="/cases">
+                                <li>Кейсы</li>
+                            </Link>
+                            <Link to="/blog">
+                                <li>Блог</li>
+                            </Link>
+
                         </ul>
                     </div>
                 </nav>
@@ -105,7 +103,7 @@ export const Header = () => {
 
             <Modal active={modalActive} setActive={setModalActive}/>
 
-        </div>
+        </>
 
 
     )

@@ -1,21 +1,20 @@
 .container {
-  width: 1170px;
-  padding-top: 13vw;
+  width: 86%;
+  padding-top: 3vw;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+
 
 }
 
 .title {
   align-self: center !important;
-  min-height: 150px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 3.5rem;
-  padding-top: 5vw;
-  padding-bottom: 1.875rem;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  height: 12vw;
+  margin-bottom: 3vw;
+  padding-top: 3vw;
+  padding-bottom: 2vw;
   background-position: center center;
   background-color: #f5f5f5;
   background-image: url("./../Data/portfolio/portfolio-pattern.png");
@@ -53,12 +52,12 @@
   align-self: center !important;
 
   h1 {
-    font-size: 40px;
+    font-size: 4vw;
     letter-spacing: 0.4vw;
     line-height: 1.2;
     text-shadow: 0 0.625rem 1.5rem rgb(149, 138, 138);
     text-transform: uppercase;
-    margin-bottom: 0.75rem;
+    //margin-bottom: 0.7vw;
     color: #343b43;
     font-weight: 900;
     margin-top: 1vw;
@@ -66,19 +65,18 @@
 }
 
 .content {
-  width: 1170px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px
+  gap: 1vw
 }
 
 /*Card1*/
 
 .item1 {
   width: 49%;
-
-  margin-bottom: 30px;
+  margin-bottom: 4vw;
   animation: showGrid .6s;
 }
 
@@ -100,10 +98,10 @@
   &:after {
     display: block;
     position: absolute;
-    bottom: -0.625rem;
-    left: 1.25rem;
-    width: calc(100% - 2.5rem);
-    height: 2.1875rem;
+    bottom: -0.6vw;
+    left: 1.25vw;
+    width: calc(100% - 2.5vw);
+    height: 2.1875vw;
     background-color: #fff;
     box-shadow: 0 1.1875rem 1.75rem 0.3125rem rgb(153, 149, 149);
     content: '';
@@ -122,14 +120,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   flex: 1 1 auto;
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0 1.5vw 1.5vw 1.5vw;
 
   .card_title {
     display: block;
     position: relative;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.625rem;
-    font-size: 1.125rem;
+    margin-bottom: 0.75vw;
+    padding-bottom: 0.625vw;
+    font-size: 2vw;
     line-height: 1.4;
     color: #343b43;
     font-weight: 900;
@@ -141,9 +139,9 @@
       display: block;
       position: absolute;
       bottom: 0;
-      left: -0.5rem;
-      width: 40px;
-      height: 2px;
+      left: -0.5vw;
+      width: 4vw;
+      height: 0.2vw;
       box-shadow: none;
       content: '';
     }
@@ -151,25 +149,26 @@
 
   .descrip {
     color: #8c8c8c !important;
+    font-size: 1.5vw;
   }
 
   .tag_links {
     display: flex;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 1vw;
 
     .tag_link {
       display: inline-block;
       position: relative;
-      margin-top: 0.3125rem;
-      margin-right: 0.375rem;
-      margin-bottom: 0.3125rem;
-      padding: 0.3125rem 0.75rem;
+      margin-top: 0.3vw;
+      margin-right: 0.375vw;
+      margin-bottom: 0.3125vw;
+      padding: 0.3125vw 0.75vw;
       -webkit-transition: color .25s;
       transition: color .25s;
       background-color: #fff;
       color: #404040;
-      font-size: .6875rem;
+      font-size: 0.8vw;
       font-weight: 600;
       text-decoration: none;
       box-shadow: 0 0.75rem 1.25rem 0.0625rem rgb(179, 175, 175);
@@ -185,25 +184,23 @@
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding: 0.75vw 1.5vw;
   background-color: #fff;
   border-top: 1px solid #e7e7e7;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+
 
   .left_side {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px
+    gap: 1vw
 
   }
 }
 
 .author_foto {
-  height: 30px;
-  width: 30px;
+  height: 2vw;
+  width: 2vw;
   border-radius: 50%;
 }
 
@@ -219,7 +216,7 @@
 .post_meta {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1vw;
   transition: opacity .25s;
   color: #8c8c8c;
   font-size: 1vw;
@@ -237,6 +234,161 @@
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .container {
+    width: 1170px;
+    padding-top: 40px;
+
+  }
+  .item1 {
+    margin-bottom: 50px;
+  }
+  .title {
+    padding: 40px 15px;
+    height: 150px;
+    margin-bottom: 40px;
+
+
+  }
+
+  .title_center {
+
+    h1 {
+      font-size: 50px;
+      letter-spacing: 5px;
+      margin-top: 20px;
+    }
+  }
+  .content {
+    width: 1170px;
+    gap: 20px
+  }
+  .card_body {
+    .descrip {
+      font-size: 16px;
+    }
+  }
+
+  .card_footer {
+    padding: 10px 20px;
+
+
+    .left_side {
+      gap: 20px
+
+    }
+
+    .author_name {
+      font-size: 14px;
+
+    }
+  }
+
+  .author_foto {
+    height: 30px;
+    width: 30px;
+
+  }
+
+
+  .post_meta {
+    gap: 20px;
+    font-size: 14px;
+
+    span {
+      font-size: 14px;
+    }
+
+  }
+  .card_body {
+    padding: 0 30px 30px 30px;
+
+    .tag_links {
+      gap: 20px;
+
+      .tag_link {
+        margin-top: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+
+      }
+    }
+
+    .card_title {
+      margin-bottom: 0.75vw;
+      padding-bottom: 0.62vw;
+      font-size: 30px;
+
+      &:after {
+        left: -10px;
+        width: 60px;
+        height: 4px;
+
+      }
+    }
+  }
+  .card {
+    &:after {
+      bottom: -15px;
+      left: 18px;
+      width: calc(100% - 30px);
+      height: 50px;
+
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 550px) {
+  .item1 {
+    width: 100%;
+  }
+  .card_body {
+    padding-left: 3vw;
+
+    .tag_links {
+      .tag_link {
+        font-size: 2vw;
+      }
+    }
+
+    .card_title {
+      font-size: 4vw;
+      margin-top: 2vw;
+
+      &:after {
+        width: 6vw;
+        height: 0.3vw;
+      }
+    }
+
+
+    .descrip {
+      font-size: 2.5vw;
+    }
+  }
+
+  .author_foto {
+    height: 5vw;
+    width: 5vw;
+  }
+  .author_name {
+    font-size: 2vw;
+  }
+  .post_meta {
+    a {
+      font-size: 2vw;
+    }
+
+    span {
+      font-size: 2vw;
+    }
   }
 }
 

@@ -1,21 +1,20 @@
 .container {
-  width: 1170px;
-  padding-top: 13vw;
+  width: 86%;
+  padding-top: 3vw;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+
 
 }
 
 .title {
   align-self: center !important;
-  min-height: 150px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 3.5rem;
-  padding-top: 5vw;
-  padding-bottom: 1.875rem;
+  height: 12vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  margin-bottom: 4vw;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
   background-position: center center;
   background-color: #f5f5f5;
   background-image: url("./../Data/portfolio/portfolio-pattern.png");
@@ -30,17 +29,18 @@
 
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 0.5vw;
 
   div {
     color: #ac32e4;
+    font-size: 1.2vw;
   }
 
   div a {
     text-decoration: none;
     color: #ac32e4;
     letter-spacing: 0.2vw;
-    font-size: .6875rem;
+    font-size: 1.2vw;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.4;
@@ -53,12 +53,11 @@
   align-self: center !important;
 
   h1 {
-    font-size: 40px;
+    font-size: 3vw;
     letter-spacing: 0.4vw;
     line-height: 1.2;
     text-shadow: 0 0.625rem 1.5rem rgb(149, 138, 138);
     text-transform: uppercase;
-    margin-bottom: 0.75rem;
     color: #343b43;
     font-weight: 900;
     margin-top: 1vw;
@@ -78,25 +77,24 @@
 }
 
 .item {
-
   border-bottom: 3px solid #e7e7e7;
   background-color: transparent;
   position: relative;
-  margin: 0 0.3125rem 0.625rem;
+  margin: 0 0.3vw 0.6vw;
   color: #404040;
-  font-size: .75rem;
+  font-size: 1vw;
   font-weight: bold;
   letter-spacing: .1em;
   white-space: nowrap;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.3s;
-  padding: 0.5625rem 1.25rem;
+  padding: 0.7vw 1.2vw;
 
   sup {
     top: -0.5em;
     position: relative;
-    font-size: .625rem;
+    font-size: 1vw;
   }
 }
 
@@ -121,37 +119,38 @@
   flex-direction: row;
   gap: 10px;
   position: relative;
-  height: 848.281px;
-  margin-top: 4vw;
+  margin-top: 2vw;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 32.68%;
-  left: 0px;
-  top: 0px;
-  margin-bottom: 30px !important;
+  width: 32.5%;
+  margin-bottom: 2vw;
+  text-decoration: none;
 }
 
 .card_body {
-  padding: 2vw
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
 }
 
 .portfolio_meta {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 1vw;
   justify-content: center;
 }
 
 .author {
   display: flex;
   flex-direction: row;
-  gap: 3px;
+  gap: 0.5vw;
   align-items: center;
   color: rgba(140, 140, 140, 0.75);
-  font-size: 14px;
+  font-size: 1.5vw;
   font-weight: 600;
 }
 
@@ -161,7 +160,7 @@
   align-items: center;
   gap: 3px;
   color: rgba(140, 140, 140, 0.75);
-  font-size: 14px;
+  font-size: 1.5vw;
   font-weight: 600;
 }
 
@@ -171,12 +170,11 @@
 
 .card_title {
   text-align: center;
-  margin-top: 1vw;
   color: #343b43;
   font-weight: 900;
   letter-spacing: .021em;
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 1.5vw;
 }
 
 .category {
@@ -191,13 +189,140 @@
   width: 7%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1vw;
   color: #404040;
-  font-size: .75rem;
+  font-size: 0.9vw;
   font-weight: bold;
   letter-spacing: .1em;
   white-space: nowrap;
   text-decoration: none;
   transition: all 0.3s;
-  padding: 0.5625rem 1.25rem;
+  padding: 0.5vw 1vw;
+}
+
+@media screen and (min-width: 1170px) {
+  .container {
+    width: 1170px;
+    padding-top: 40px;
+
+
+  }
+  .title {
+    height: 150px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+  }
+  .author {
+    font-size: 16px;
+  }
+  .likes {
+    font-size: 16px;
+  }
+  .title_center {
+    h1 {
+      font-size: 40px;
+      letter-spacing: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+  .breadcrump {
+    div a {
+      font-size: 14px;
+      letter-spacing: 3px;
+
+    }
+  }
+  .breadcrump div {
+    font-size: 14px;
+  }
+
+  .wrapp_works {
+    margin-top: 40px;
+  }
+  .card_body {
+    padding: 30px;
+    gap: 10px
+  }
+  .card_title {
+
+    font-size: 18px;
+  }
+
+  .item_category {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+  }
+  .item {
+    font-size: 12px;
+    padding: 10px 20px;
+    margin: 0 5px 15px;
+
+    sup {
+      font-size: 12px;
+    }
+  }
+  .portfolio_meta {
+    gap: 10px
+  }
+  .list {
+    padding-bottom: 0.7vw;
+
+
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .card {
+    width: 48%;
+    margin-right: auto;
+    margin-left: auto;
+
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    width: 100%;
+
+  }
+  .card_body {
+    gap: 1.5vw
+  }
+  .container {
+    width: 86%;
+  }
+  .author {
+    font-size: 3vw;
+
+  }
+
+  .likes {
+    font-size: 3vw;
+  }
+  .card_title {
+    font-size: 3vw;
+  }
+  .item_category {
+    font-size: 2vw;
+  }
+  .item {
+    font-size: 2vw;
+  }
+  .title_center h1 {
+    font-size: 4vw;
+  }
+  .breadcrump div a {
+    font-size: 2vw;
+  }
+  .breadcrump div {
+    font-size: 2vw;
+  }
+;
 }

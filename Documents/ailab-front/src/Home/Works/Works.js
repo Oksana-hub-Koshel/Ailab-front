@@ -1,41 +1,72 @@
 import s from "./Works.module.scss"
-import {FaArrowRight, FaRegHeart} from "react-icons/fa";
+import {FaRegHeart} from "react-icons/fa";
+import {useEffect, useState} from "react";
+import {Pagination} from "@mui/material";
 
 
 function Works() {
-    const data = [
+    const [photos, setPhotos] = useState([
 
-        {
-            image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            caption: "Scotland",
-            author: "Willy Billy"
-        },
-        {
-            image: "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            caption: "London",
-            author: "Willy Billy"
-        },
-        {
-            image: "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            caption: "San Francisco",
-            author: "Willy Billy"
-        },
-        {
-            image: "https://images.pexels.com/photos/33688/delicate-arch-night-stars-landscape.jpg?cs=srgb&dl=pexels-pixabay-33688.jpg&fm=jpg&_gl=1*9jrolq*_ga*ODczNzc5NDg3LjE2NjY2MDI5NDc.*_ga_8JE65Q40S6*MTY2NjYwMjk1MS4xLjEuMTY2NjYwNDAzMi4wLjAuMA.",
-            caption: "Amsterdam",
-            author: "Willy Billy"
-        },
-        {
-            image: "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            caption: "Kyiv",
-            author: "Willy Billy"
-        },
-        {
-            image: "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            caption: "Kyiv",
-            author: "Willy Billy"
+            {
+                image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                caption: "Scotland",
+                author: "Willy Billy"
+            },
+            {
+                image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                caption: "Scotland",
+                author: "Willy Billy"
+            },
+            {
+                image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                caption: "Scotland",
+                author: "Willy Billy"
+            },
+            {
+                image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                caption: "Scotland",
+                author: "Willy Billy"
+            },
+            {
+                image: "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                caption: "London",
+                author: "Willy Billy"
+            },
+            {
+                image: "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                caption: "San Francisco",
+                author: "Willy Billy"
+            },
+            {
+                image: "https://images.pexels.com/photos/33688/delicate-arch-night-stars-landscape.jpg?cs=srgb&dl=pexels-pixabay-33688.jpg&fm=jpg&_gl=1*9jrolq*_ga*ODczNzc5NDg3LjE2NjY2MDI5NDc.*_ga_8JE65Q40S6*MTY2NjYwMjk1MS4xLjEuMTY2NjYwNDAzMi4wLjAuMA.",
+                caption: "Amsterdam",
+                author: "Willy Billy"
+            },
+            {
+                image: "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                caption: "Kyiv",
+                author: "Willy Billy"
+            },
+            {
+                image: "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                caption: "Kyiv",
+                author: "Willy Billy"
+            }
+        ]
+    );
+
+    const scrollHandler = (e) => {
+        console.log('scroll')
+    }
+
+    useEffect(() => {
+        document.addEventListener('scroll', scrollHandler)
+        return function () {
+            document.removeEventListener('scroll', scrollHandler)
         }
-    ]
+    }, [])
+
+
     return (
         <div className={s.container}>
             <div className={s.title}>
@@ -44,10 +75,10 @@ function Works() {
             </div>
 
             <div className={s.blocks}>
-                {data.map(item => {
+                {photos.map(item => {
                     return (
 
-                        <div className={s.block}>
+                        <div className={s.block} key={item.id}>
                             <a href="/portfolio"> <img src={item.image}/></a>
                             <div className={s.description}>
                                 <p>{item.author}</p>
@@ -77,14 +108,14 @@ function Works() {
 
             </div>
             <div className={s.btn_wrapp}>
-                <div className={s.btn_order}>
+                <Pagination count={3} color="secondary" className={s.pagin}/>
 
-                    <a>посмотреть все работы</a>
-                    <i className={s.circle}>
-                        <FaArrowRight className={s.arrow_icon}/>
-                    </i>
+                {/*<a>посмотреть все работы</a>*/}
+                {/*<i className={s.circle}>*/}
+                {/*    <FaArrowRight className={s.arrow_icon}/>*/}
+                {/*</i>*/}
 
-                </div>
+                {/*</div>*/}
             </div>
         </div>
     )

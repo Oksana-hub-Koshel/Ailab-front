@@ -3,15 +3,13 @@
   background-repeat: no-repeat !important;
   background-size: cover !important;
   padding-bottom: 3rem !important;
-  height: 500px;
+  //height: 500px;
 }
 
 .wrapper {
-  max-width: 1920px;
+
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: -10px;
   padding-top: 1.5rem !important;
   width: 100%;
 }
@@ -19,7 +17,7 @@
 .wrapp_block {
   margin-left: 8.3333333333%;
   flex: 0 0 66.6666666667%;
-  max-width: 66.6666666667%;
+  width: 66.6666666667%;
 
   & h2 {
     line-height: 1.25;
@@ -174,9 +172,42 @@
 
 }
 
+@media screen and (min-width: 1170px) {
+  .container {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1170px) {
+  .wrapp_block {
+    width: 95%;
+    margin-left: 3%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+ 
+  .stages {
+    flex-wrap: wrap;
+  }
+  .stage {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+
+}
 
 
-
-
+@media screen and (max-width: 550px) {
+  .stages {
+    width: 100%;
+  }
+  .stage {
+    width: 100%;
+  }
+}
 
 

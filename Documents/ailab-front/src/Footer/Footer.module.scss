@@ -5,16 +5,14 @@
 }
 
 .container {
-  max-width: 1320px;
+  width: 80%;
   background: black;
-  width: 100%;
+
   display: flex;
   flex-direction: row;
-  padding-right: var(--bs-gutter-x, .75rem);
-  padding-left: var(--bs-gutter-x, .75rem);
   margin-right: auto;
   margin-left: auto;
-  margin-top: 5vw;
+  margin-top: 3vw;
   padding-top: 2vw;
   padding-bottom: 5vw;
 }
@@ -24,17 +22,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-.5 * var(--bs-gutter-x));
-  margin-left: calc(-.5 * var(--bs-gutter-x));
-  gap: 150px;
-  row-gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 5vw;
 
 
 }
 
 .first_block {
-  margin-left: 50px;
   display: flex;
   flex-direction: column;
   gap: 5px
@@ -214,4 +209,24 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1170px) {
+  .container {
+    width: 1170px;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .container {
+    padding: 3vw;
+
+  }
+}
+
+@media screen and (max-width: 550px) {
+
 }

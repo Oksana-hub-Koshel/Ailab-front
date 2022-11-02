@@ -3,8 +3,9 @@ import {Header} from "../Header/Header";
 import {Portfolio} from "../Portfolio/Portfolio";
 import {Cases} from "../Cases/Cases";
 import {Blog} from "../Blog/Blog";
-import {Footer} from "../Footer/Footer";
 import {Route, Routes} from "react-router-dom";
+import {Footer} from "../Footer/Footer";
+import {Info} from "../Portfolio/Info/Info";
 
 export const Main = () => {
     return (
@@ -15,6 +16,7 @@ export const Main = () => {
                 <Route path="/portfolio" element={<Portfolio/>}/>
                 <Route path="/cases" element={<Cases/>}/>
                 <Route path="/blog" element={<Blog/>}/>
+                <Route path="/info" element={<Info/>}/>
 
             </Routes>
             <Footer/>

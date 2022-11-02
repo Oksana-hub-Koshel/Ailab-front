@@ -70,7 +70,7 @@ export const Portfolio = () => {
             <div className={s.wrapp_works}>
                 {data.map(item => {
                     return (
-                        <div className={s.card}>
+                        <Link to="/info" className={s.card}>
                             <img src={item.image}/>
                             <div className={s.card_body}>
                                 <div className={s.portfolio_meta}>
@@ -90,7 +90,7 @@ export const Portfolio = () => {
                             </div>
 
 
-                        </div>
+                        </Link>
                     )
                 })}
 
