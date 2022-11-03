@@ -11,10 +11,7 @@ export const Header = () => {
     const [modalActive, setModalActive] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
-    const openMenu = () => {
-        console.log('open')
-        setIsOpen(true);
-    }
+
     return (
         <>
             <div className="container container--1">

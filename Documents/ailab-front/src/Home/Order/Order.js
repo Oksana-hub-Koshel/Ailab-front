@@ -3,6 +3,8 @@ import hero from "./../../Data/HomePage/hero.png"
 import {HiOutlineArrowDown} from "react-icons/hi";
 import $ from "jquery";
 import Typed from "react-typed";
+import {Modal} from "../../Modal/Modal";
+import {useState} from "react";
 
 
 $(function () {
@@ -145,6 +147,7 @@ $(function () {
 });
 
 export const Order = () => {
+    const [modalActive, setModalActive] = useState(false);
     const textLines = [
         `Веб приложений`,
         `сайтов на  Wordpress`,
@@ -176,7 +179,7 @@ export const Order = () => {
                     </p>
 
 
-                    <button className={s.btn_order}>
+                    <button className={s.btn_order} onClick={() => setModalActive(true)}>
                         Заказать услугу
                         <i className={s.circle}>
                             <HiOutlineArrowDown/>
@@ -212,6 +215,7 @@ export const Order = () => {
                         <hr className={s.line}/>
                     </div>
                 </div>
+                <Modal active={modalActive} setActive={setModalActive}/>
             </div>
         </>
 

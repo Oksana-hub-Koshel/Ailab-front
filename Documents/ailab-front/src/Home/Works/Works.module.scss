@@ -136,12 +136,23 @@
   box-shadow: 0 0.75rem 1.25rem 0.0625rem rgb(223, 218, 218);
   z-index: 1;
 
+  &:hover {
+    background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
+
+  }
+
   & a {
     color: black;
     text-decoration: none;
     font-size: 0.6vw;
     font-weight: 600;
   }
+
+  & a:hover {
+    color: white;
+  }
+
+
 }
 
 .btn_wrapp {

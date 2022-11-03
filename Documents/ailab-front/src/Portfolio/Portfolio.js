@@ -1,9 +1,11 @@
 import s from "./Portfolio.module.scss";
 import {Link} from "react-router-dom";
 import {AiOutlineHeart, AiOutlineUser} from "react-icons/ai";
+import {useState} from "react";
 
 
 export const Portfolio = () => {
+    const [active, setActive] = useState(false)
     const data = [
 
         {

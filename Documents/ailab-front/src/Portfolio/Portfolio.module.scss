@@ -91,11 +91,16 @@
   transition: all 0.3s;
   padding: 0.7vw 1.2vw;
 
+
   sup {
     top: -0.5em;
     position: relative;
     font-size: 1vw;
   }
+}
+
+.item:active {
+  background-color: #ac32e4;
 }
 
 .item:hover {
@@ -197,6 +202,13 @@
   text-decoration: none;
   transition: all 0.3s;
   padding: 0.5vw 1vw;
+
+
+}
+
+.item_category:hover {
+  background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
+  color: white;
 }
 
 @media screen and (min-width: 1170px) {
