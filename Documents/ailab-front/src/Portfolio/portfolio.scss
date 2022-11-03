@@ -1,0 +1,44 @@
+.active_button_grid {
+  border-color: #ac32e4;
+  background-color: #ac32e4;
+  border-bottom: 3px solid #ac32e4;
+  color: white;
+  cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.no_active_grid {
+  border-bottom: 3px solid #e7e7e7;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.active_button_rows {
+  border-color: #ac32e4;
+  background-color: #ac32e4;
+  border-bottom: 3px solid #ac32e4;
+  color: white;
+  cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.no_active_rows {
+  background-color: white;
+  border-bottom: 3px solid #e7e7e7;
+  color: #000;
+  cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}

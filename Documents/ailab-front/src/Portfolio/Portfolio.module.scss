@@ -10,11 +10,8 @@
 .title {
   align-self: center !important;
   height: 12vw;
-  padding-right: 1vw;
-  padding-left: 1vw;
+  padding: 4vw 1vw;
   margin-bottom: 4vw;
-  padding-top: 4vw;
-  padding-bottom: 4vw;
   background-position: center center;
   background-color: #f5f5f5;
   background-image: url("./../Data/portfolio/portfolio-pattern.png");
@@ -77,10 +74,9 @@
 }
 
 .item {
-  border-bottom: 3px solid #e7e7e7;
+
   background-color: transparent;
   position: relative;
-  margin: 0 0.3vw 0.6vw;
   color: #404040;
   font-size: 1vw;
   font-weight: bold;
@@ -89,7 +85,6 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.3s;
-  padding: 0.7vw 1.2vw;
 
 
   sup {
@@ -99,23 +94,6 @@
   }
 }
 
-.item:active {
-  background-color: #ac32e4;
-}
-
-.item:hover {
-  border-color: #ac32e4;
-  background-color: #ac32e4;
-  border-bottom: 3px solid #e7e7e7;
-
-  sup {
-    color: white;
-  }
-
-  a {
-    color: white;
-  }
-}
 
 .wrapp_works {
   width: 100%;
@@ -211,6 +189,7 @@
   color: white;
 }
 
+
 @media screen and (min-width: 1170px) {
   .container {
     width: 1170px;
@@ -272,7 +251,6 @@
   }
   .item {
     font-size: 12px;
-    padding: 10px 20px;
     margin: 0 5px 15px;
 
     sup {

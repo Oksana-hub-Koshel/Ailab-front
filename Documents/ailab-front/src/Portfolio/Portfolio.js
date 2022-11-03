@@ -1,11 +1,12 @@
 import s from "./Portfolio.module.scss";
+import "./portfolio.scss";
 import {Link} from "react-router-dom";
 import {AiOutlineHeart, AiOutlineUser} from "react-icons/ai";
 import {useState} from "react";
 
 
 export const Portfolio = () => {
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState("Grid")
     const data = [
 
         {
@@ -59,16 +60,26 @@ export const Portfolio = () => {
                     <h1>наши работы</h1>
                 </div>
             </div>
+
             <div className={s.list}>
                 <div className={s.item}>
-                    <a>все</a>
-                    <sup>1</sup>
+
+                    <a onClick={() => setActive('Grid')}
+                       className={` active_button_grid ${active === 'Grid' ? 'active_button_grid' : 'no_active_rows'}`}>все
+                        <sup>1</sup>
+                    </a>
+
                 </div>
+
                 <div className={s.item}>
-                    <a>app</a>
-                    <sup>1</sup>
+
+                    <a onClick={() => setActive('Row')}
+                       className={`${active === 'Row' ? 'active_button_rows' : 'no_active_grid'} `}>app
+                        <sup>1</sup></a>
+
                 </div>
             </div>
+
             <div className={s.wrapp_works}>
                 {data.map(item => {
                     return (
