@@ -31,13 +31,14 @@ export const Modal = ({active, setActive}) => {
                 </div>
                 <div className="content_window">
                     <div className="left_side">
+
                         <form className="form" autoComplete="off">
                             <div className="inp_input1">
                                 <label className="label">ФИО</label>
                                 <input
                                     className="inp_field1"
                                     {...register('username', {
-                                        required: 'Field is not required',
+                                        required: 'Поле обязательно',
                                     })}
                                 />
                                 <div className="error">{errors?.username?.message}</div>
@@ -47,7 +48,7 @@ export const Modal = ({active, setActive}) => {
                                 <input
                                     className="inp_field1"
                                     {...register('telephone', {
-                                        required: 'Field is not required',
+                                        required: 'Поле обязательно',
                                     })}
                                 />
                                 <div className="error">{errors?.telephone?.message}</div>
@@ -56,9 +57,7 @@ export const Modal = ({active, setActive}) => {
                                 <label className="label">Описание</label>
                                 <textarea
                                     className="inp_text"
-                                    {...register('description', {
-                                        required: 'Field is not required',
-                                    })}
+                                    {...register('description')}
                                 />
 
                             </div>

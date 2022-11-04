@@ -6,7 +6,7 @@ import {useState} from "react";
 
 
 export const Portfolio = () => {
-    const [active, setActive] = useState("Grid")
+    const [active, setActive] = useState("All")
     const data = [
 
         {
@@ -64,8 +64,8 @@ export const Portfolio = () => {
             <div className={s.list}>
                 <div className={s.item}>
 
-                    <a onClick={() => setActive('Grid')}
-                       className={` active_button_grid ${active === 'Grid' ? 'active_button_grid' : 'no_active_rows'}`}>все
+                    <a onClick={() => setActive('All')}
+                       className={` active_button_all ${active === 'All' ? 'active_button_all' : 'no_active_app'}`}>все
                         <sup>1</sup>
                     </a>
 
@@ -73,8 +73,8 @@ export const Portfolio = () => {
 
                 <div className={s.item}>
 
-                    <a onClick={() => setActive('Row')}
-                       className={`${active === 'Row' ? 'active_button_rows' : 'no_active_grid'} `}>app
+                    <a onClick={() => setActive('App')}
+                       className={`${active === 'App' ? 'active_button_app' : 'no_active_all'} `}>app
                         <sup>1</sup></a>
 
                 </div>

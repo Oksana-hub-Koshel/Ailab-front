@@ -4,7 +4,8 @@ import {FaTelegram} from "react-icons/fa";
 import {BsTelephoneInbound} from "react-icons/bs";
 import {FiFacebook} from "react-icons/fi";
 import {TfiEmail} from "react-icons/tfi";
-import {IoIosArrowForward} from "react-icons/io"
+import {IoIosArrowForward} from "react-icons/io";
+import logo from "./../Data/Header/logo-dark.svg";
 
 export const Footer = () => {
     return (
@@ -14,7 +15,7 @@ export const Footer = () => {
                 <div className={styles.row}>
                     <div className={styles.first_block}>
                         <div className={styles.logo}>
-                            {/*<img src={logo} className={styles.logo_image}/>*/}
+                            <img src={logo} className={styles.logo_image}/>
                         </div>
                         <div className={styles.text}>
                             <p>

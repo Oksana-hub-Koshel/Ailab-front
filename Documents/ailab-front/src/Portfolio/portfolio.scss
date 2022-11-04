@@ -1,44 +1,69 @@
-.active_button_grid {
+.active_button_all {
   border-color: #ac32e4;
   background-color: #ac32e4;
-  border-bottom: 3px solid #ac32e4;
+  border-bottom: 0.2vw solid #e7e7e7;
   color: white;
   cursor: pointer;
   display: block;
-  padding: 10px 20px;
-  margin-left: 10px;
+  padding: 0.8vw 1.3vw;
+  margin-left: 1vw;
   text-transform: uppercase;
 }
 
-.no_active_grid {
-  border-bottom: 3px solid #e7e7e7;
+.no_active_all {
+  border-bottom: 0.2vw solid #e7e7e7;
   background-color: white;
   color: #000;
   cursor: pointer;
-  padding: 10px 20px;
-  margin-left: 10px;
+  padding: 0.8vw 1.3vw;
+  margin-left: 1vw;
   text-transform: uppercase;
 }
 
-.active_button_rows {
+.active_button_app {
   border-color: #ac32e4;
   background-color: #ac32e4;
-  border-bottom: 3px solid #ac32e4;
+  border-bottom: 0.2vw solid #e7e7e7;
   color: white;
   cursor: pointer;
   display: block;
-  padding: 10px 20px;
-  margin-left: 10px;
+  padding: 0.8vw 1.3vw;
+  margin-left: 1vw;
   text-transform: uppercase;
 }
 
-.no_active_rows {
+.no_active_app {
   background-color: white;
-  border-bottom: 3px solid #e7e7e7;
+  border-bottom: 0.2vw solid #e7e7e7;
   color: #000;
   cursor: pointer;
-  display: block;
-  padding: 10px 20px;
-  margin-left: 10px;
+  padding: 0.8vw 1.3vw;
+  margin-left: 1vw;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1170px) {
+  .active_button_all {
+    padding: 10px 20px;
+    margin-left: 10px;
+
+  }
+
+  .no_active_all {
+    padding: 10px 20px;
+    margin-left: 10px;
+
+  }
+
+  .active_button_app {
+    padding: 10px 20px;
+    margin-left: 10px;
+
+  }
+
+  .no_active_app {
+    padding: 10px 20px;
+    margin-left: 10px;
+
+  }
 }

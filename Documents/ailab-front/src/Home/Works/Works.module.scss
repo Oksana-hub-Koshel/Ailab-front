@@ -1,26 +1,25 @@
 .container {
-  width: 100%;
+  width: 86%;
   margin: 0 auto;
 }
 
 .title {
   h2 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75vw;
     color: #343b43;
     font-weight: 900;
     line-height: 1.25;
     position: relative;
-
     text-align: center !important;
-    font-size: 2.125rem;
-    margin-top: 3vw !important;
+    font-size: 2.5vw;
+    margin-top: 3vw;
   }
 
   p {
     text-align: center !important;
     padding: 1vw;
     font-family: "Open Sans", sans-serif;
-    font-size: .875rem;
+    font-size: 1vw;
     font-weight: normal;
     letter-spacing: 0;
     color: #8c8c8c;
@@ -62,7 +61,7 @@
 
 .description {
   flex: 1 1 auto;
-  padding-left: 30px;
+  padding-left: 2vw;
 
   p {
     font-style: normal;
@@ -71,19 +70,17 @@
     text-transform: none;
     line-height: 1;
     display: inline-block;
-
-    font-size: 1.1em;
+    font-size: 1.3vw;
     vertical-align: middle;
   }
 
   h3 {
-    font-size: 1.125rem;
+    font-size: 2vw;
     line-height: 1.35;
     margin-top: 0;
-    //padding: 1vw;
     color: #343b43;
     font-weight: 900;
-    letter-spacing: .021em;
+    letter-spacing: .021vw;
   }
 }
 
@@ -93,12 +90,10 @@
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding: 1vw 1.5vw;
   background-color: #fff;
   border-top: 1px solid #e7e7e7;
-  padding-top: 1vw;
-  padding-bottom: 1vw;
+
 
 }
 
@@ -108,7 +103,7 @@
   gap: 5px;
   align-items: center;
   color: rgba(140, 140, 140, 0.75);
-  font-size: .6875rem;
+  font-size: 1.5vw;
   font-weight: 600;
 }
 
@@ -122,18 +117,17 @@
 .app {
   display: inline-block;
   position: relative;
-  margin-top: 0.3125rem;
-  margin-right: 0.375rem;
-  margin-bottom: 0.3125rem;
-  padding: 0.3125rem 0.75rem;
+  margin-top: 0.3125vw;
+  margin-right: 0.375vw;
+  margin-bottom: 0.3125vw;
+  padding: 0.3125vw 0.75vw;
   -webkit-transition: color .25s;
   transition: color .25s;
   background-color: #fff;
   color: #404040;
-  font-size: .6875rem;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 0.75rem 1.25rem 0.0625rem rgb(223, 218, 218);
+  box-shadow: 0 0.75vw 1.25vw 0.0625vw rgb(223, 218, 218);
   z-index: 1;
 
   &:hover {
@@ -144,7 +138,7 @@
   & a {
     color: black;
     text-decoration: none;
-    font-size: 0.6vw;
+    font-size: 1vw;
     font-weight: 600;
   }
 
@@ -156,49 +150,50 @@
 }
 
 .btn_wrapp {
+  display: flex;
+  align-items: center;
   margin-top: 2vw;
-  text-align: center !important;
-  padding-top: 0.7rem !important;
-  width: 30%;
-  font-size: .875rem;
+  width: 20%;
+  font-size: .8vw;
   margin-bottom: 2vw;
   margin-right: auto;
   margin-left: auto;
-}
-
-.btn_order {
   font-weight: bold;
-  display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 5px;
-  padding-right: 18px;
+  justify-content: center;
+  gap: 0.3vw;
+  padding-right: 0.3vw;
+  padding-left: 0.3vw;
   background: #ac32e4;
   color: #fff;
-  border-radius: 22px;
-  height: 44px;
+  border-radius: 1.5vw;
+  height: 3.5vw;
   transform: translateZ(0);
   border: 0;
-  font-size: .75rem;
   text-align: center;
   vertical-align: middle;
-  letter-spacing: .1em;
+  letter-spacing: .1vw;
   cursor: pointer;
   z-index: 1;
   text-transform: uppercase;
+
+  & a {
+    text-decoration: none;
+    color: white;
+  }
 }
+
 
 .circle {
   display: block;
   top: 50%;
   left: 7px;
-  width: 31px;
-  height: 31px;
+  width: 2vw;
+  height: 2vw;
   -webkit-transition: all 0.3s !important;
   transition: all 0.3s !important;
   border-radius: 50%;
-  line-height: 30px;
+  line-height: 1.5vw;
   background-color: #fff;
   color: #ac32e4;
 }
@@ -215,7 +210,83 @@
 @media screen and (min-width: 1170px) {
   .container {
     width: 1170px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blocks {
+    gap: 20px;
+    row-gap: 40px;
+  }
+  .app {
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 5px 7px;
+  }
+
+  .app a {
+    font-size: 12px;
+  }
+  .btn_wrapp {
+
+    margin-top: 30px;
+    width: 20%;
+    font-size: 10px;
+    margin-bottom: 30px;
+    gap: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 22px;
+    height: 45px;
+
+  }
+
+  .circle {
+    left: 7px;
+    width: 30px;
+    height: 30px;
+
+    line-height: 20px;
+
+  }
+  .description {
+    padding-left: 30px;
+
+    p {
+      font-size: 16px;
+
+    }
+
+    h3 {
+      font-size: 18px;
+
+    }
+  }
+  .arrow_icon {
+    margin-top: 10px;
+  }
+  .card_footer {
+    padding: 10px 30px;
+
+
+  }
+  .likes {
+    font-size: 12px;
+  }
+  .title {
+    h2 {
+      margin-bottom: 20px;
+      font-size: 40px;
+      margin-top: 40px;
+    }
+
+    p {
+
+      padding: 5px;
+      font-size: 18px;
+
+
+    }
   }
 }
 
@@ -233,8 +304,59 @@
     width: 100%;
   }
   .btn_wrapp {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    border-radius: 4vw;
+    gap: 1vw;
+    width: 45%;
+    height: 7vw;
+    font-size: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+  .circle {
+    top: 50%;
+    left: 0.3vw;
+    width: 4vw;
+    height: 4vw;
+
+  }
+
+  .arrow_icon {
+    margin-top: 1vw;
+  }
+
+  .title {
+    h2 {
+      font-size: 4vw;
+
+    }
+
+    p {
+      font-size: 2.5vw;
+
+    }
+
+  }
+  .description {
+    p {
+      font-size: 2.5vw;
+
+    }
+
+    h3 {
+      font-size: 3vw;
+
+    }
+  }
+  .app {
+    padding: 0.8vw 0.8vw;
+  }
+  .app a {
+    font-size: 1.5vw;
+  }
+  .card_footer {
+    padding: 1.5vw 2vw;
+  }
+  .likes p {
+    font-size: 2.5vw;
   }
 }

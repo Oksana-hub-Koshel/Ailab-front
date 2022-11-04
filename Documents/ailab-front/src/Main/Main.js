@@ -6,6 +6,7 @@ import {Blog} from "../Blog/Blog";
 import {Route, Routes} from "react-router-dom";
 import {Footer} from "../Footer/Footer";
 import {Info} from "../Portfolio/Info/Info";
+import {NoPage} from "../NoPage/NoPage";
 
 export const Main = () => {
     return (
@@ -17,6 +18,7 @@ export const Main = () => {
                 <Route path="/cases" element={<Cases/>}/>
                 <Route path="/blog" element={<Blog/>}/>
                 <Route path="/info" element={<Info/>}/>
+                <Route path="*" element={<NoPage/>}/>
 
             </Routes>
             <Footer/>

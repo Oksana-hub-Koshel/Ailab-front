@@ -77,7 +77,7 @@ export const Header = () => {
 
 
                 <div className={s.btn}>
-                    <div><FaTelegramPlane className={s.teleg_icon}/></div>
+                    <FaTelegramPlane/>
                     <a onClick={() => setModalActive(true)}>связаться с нами</a>
 
                 </div>

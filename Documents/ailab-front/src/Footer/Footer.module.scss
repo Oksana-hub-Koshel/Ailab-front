@@ -1,13 +1,12 @@
 
 .footer {
-  background: black;
+  background-color: #343b43 !important;
   color: white;
 }
 
 .container {
   width: 80%;
-  background: black;
-
+  background-color: #343b43 !important;
   display: flex;
   flex-direction: row;
   margin-right: auto;
@@ -217,6 +216,11 @@
     margin-top: 30px;
     padding-top: 30px;
     padding-bottom: 50px;
+  }
+  .logo img {
+    width: 110px;
+    height: 60px;
+    background-color: white;
   }
 }
 

@@ -65,13 +65,14 @@
 }
 
 .content {
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
 
 .left_side {
   flex: 0 0 66.6666666667%;
-  width: 66.6%;
+  width: 60%;
   padding-right: 15px;
   padding-left: 15px;
 
@@ -107,8 +108,7 @@
 }
 
 .right_side {
-  flex: 0 0 33.3333333333%;
-  width: 33.3333333333%;
+  width: 40%;
   padding-right: 15px;
   margin-left: 15px;
 
@@ -116,14 +116,18 @@
     margin-top: 3vw;
     display: block;
     position: relative;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1.5vw;
+    padding-bottom: 0.5vw;
     border-bottom: 1px solid #e7e7e7;
     color: #404040;
-    font-size: .875rem;
+    font-size: 1.5vw;
     font-weight: bold;
     letter-spacing: .03em;
     text-transform: uppercase;
+  }
+
+  div {
+    font-size: 1.2vw;
   }
 
   h2:after {
@@ -131,8 +135,8 @@
     display: block;
     position: absolute;
     width: 5vw;
-    height: 0.1875rem;
-    margin-top: 0.6vw;
+    height: 0.2vw;
+    margin-top: 0.5vw;
     content: '';
   }
 }
@@ -169,8 +173,9 @@
 .btn_catalog {
   display: flex;
   justify-content: center !important;
+  align-items: center;
   margin-top: 3vw;
-  height: 4vw;
+  height: 6vw;
 }
 
 .btn_background {
@@ -193,6 +198,16 @@
 
 
   }
+  .right_side {
+    h2 {
+      font-size: 18px;
+    }
+
+    div {
+      font-size: 16px;
+    }
+  }
+
   .breadcrump {
     div a {
       font-size: 14px;
@@ -248,5 +263,63 @@
       width: 20px;
 
     }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content {
+    flex-direction: column;
+  }
+  .left_side {
+    width: 100%;
+    padding: 0px;
+
+    .info {
+      font-size: 2vw;
+    }
+  }
+
+
+  .right_side h2 {
+    margin-top: 1vw;
+    font-size: 3vw;
+    border-bottom: 1px solid lightgray;
+
+    &:after {
+      margin-top: 0.5vw;
+      width: 6vw;
+      height: 0.3vw;
+    }
+
+
+  }
+  .right_side div {
+    font-size: 2vw;
+
+  }
+  .line_likes {
+    margin-top: 4vw;
+
+    .likes svg {
+      height: 2vw;
+      width: 2vw;
+    }
+
+    .likes p {
+      font-size: 2vw;
+    }
+  }
+  .btn_background {
+    padding: 1vw 2vw 1vw;
+
+    svg {
+      height: 3vw;
+      width: 3vw;
+
+    }
+  }
+  .btn_catalog {
+    margin-bottom: 4vw;
+    margin-top: 4vw;
   }
 }

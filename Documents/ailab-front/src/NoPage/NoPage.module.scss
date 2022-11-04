@@ -1,0 +1,48 @@
+.container {
+  width: 86%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+
+  h1 {
+    color: #fff;
+    font-size: 19vw;
+    line-height: 1.12;
+    text-shadow: 12px 12px 30px rgba(137, 138, 141, 0.13);
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  h2 {
+    font-size: 2.5vw;
+  }
+
+  p {
+    font-size: 2vw;
+  }
+}
+
+
+@media screen and (min-width: 1170px) {
+  .container {
+    width: 1170px;
+
+    h1 {
+      font-size: 280px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+  }
+
+}

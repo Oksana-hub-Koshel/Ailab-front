@@ -145,41 +145,6 @@ export const Blog = () => {
                 })}
 
 
-                {/*<div className={s.item2}>*/}
-                {/*    <div className={s.card}>*/}
-                {/*        <a className={s.image_block}>*/}
-                {/*            <img src={data[1].image}/>*/}
-                {/*        </a>*/}
-                {/*        <div className={s.card_body}>*/}
-                {/*            <h5 className={s.card_title}>*/}
-                {/*                <a>{data[1].caption}</a>*/}
-                {/*            </h5>*/}
-                {/*            <p className={s.descrip}>{data[1].description}</p>*/}
-                {/*            <div className={s.tag_links}>*/}
-                {/*                <a className={s.tag_link}>{data[1].section1}</a>*/}
-                {/*                <a className={s.tag_link}>{data[1].section2}</a>*/}
-                {/*            </div>*/}
-
-                {/*        </div>*/}
-                {/*        <div className={s.card_footer}>*/}
-                {/*            <a className={s.left_side}>*/}
-                {/*                <img className={s.author_foto} src={data[1].photo}/>*/}
-                {/*                <div className={s.author_name}>{data[1].author}</div>*/}
-                {/*            </a>*/}
-                {/*            <div className={s.post_meta}>*/}
-                {/*                <a>*/}
-                {/*                    <BiMessage/>*/}
-                {/*                    {data[1].comment}*/}
-                {/*                </a>*/}
-                {/*                <span>*/}
-                {/*                    <BsClockHistory/>*/}
-                {/*                    {data[1].date}*/}
-                {/*                </span>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-
             </div>
         </div>
     )

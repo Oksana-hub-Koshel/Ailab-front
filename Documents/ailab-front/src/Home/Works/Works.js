@@ -1,7 +1,7 @@
 import s from "./Works.module.scss"
-import {FaRegHeart} from "react-icons/fa";
+import {FaArrowRight, FaRegHeart} from "react-icons/fa";
 import {useEffect, useState} from "react";
-import {Pagination} from "@mui/material";
+import {Link} from "react-router-dom";
 
 
 function Works() {
@@ -36,22 +36,8 @@ function Works() {
                 image: "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 caption: "San Francisco",
                 author: "Willy Billy"
-            },
-            {
-                image: "https://images.pexels.com/photos/33688/delicate-arch-night-stars-landscape.jpg?cs=srgb&dl=pexels-pixabay-33688.jpg&fm=jpg&_gl=1*9jrolq*_ga*ODczNzc5NDg3LjE2NjY2MDI5NDc.*_ga_8JE65Q40S6*MTY2NjYwMjk1MS4xLjEuMTY2NjYwNDAzMi4wLjAuMA.",
-                caption: "Amsterdam",
-                author: "Willy Billy"
-            },
-            {
-                image: "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                caption: "Kyiv",
-                author: "Willy Billy"
-            },
-            {
-                image: "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                caption: "Kyiv",
-                author: "Willy Billy"
             }
+
         ]
     );
 
@@ -108,14 +94,13 @@ function Works() {
 
             </div>
             <div className={s.btn_wrapp}>
-                <Pagination count={3} color="secondary" className={s.pagin}/>
+                {/*<Pagination count={3} color="secondary" className={s.pagin}/>*/}
+                <Link to="/portfolio">посмотреть все работы</Link>
+                <i className={s.circle}>
+                    <FaArrowRight className={s.arrow_icon}/>
+                </i>
 
-                {/*<a>посмотреть все работы</a>*/}
-                {/*<i className={s.circle}>*/}
-                {/*    <FaArrowRight className={s.arrow_icon}/>*/}
-                {/*</i>*/}
 
-                {/*</div>*/}
             </div>
         </div>
     )

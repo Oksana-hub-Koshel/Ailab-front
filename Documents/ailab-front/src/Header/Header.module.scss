@@ -42,7 +42,7 @@
     font-size: 0.8vw;
   }
 
-  & div svg {
+  & svg {
     height: 1vw;
     width: 1vw;
     color: white;
@@ -124,7 +124,7 @@
 
 
 @media screen and (max-width: 800px) {
- 
+
   .menu_item {
     display: none;
   }
