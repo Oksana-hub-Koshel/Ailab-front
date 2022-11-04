@@ -59,6 +59,7 @@
 
 }
 
+
 .description {
   flex: 1 1 auto;
   padding-left: 2vw;
@@ -75,7 +76,7 @@
   }
 
   h3 {
-    font-size: 2vw;
+    font-size: 1.8vw;
     line-height: 1.35;
     margin-top: 0;
     color: #343b43;
@@ -154,14 +155,12 @@
   align-items: center;
   margin-top: 2vw;
   width: 20%;
-  font-size: .8vw;
   margin-bottom: 2vw;
   margin-right: auto;
   margin-left: auto;
-  font-weight: bold;
   flex-direction: row;
   justify-content: center;
-  gap: 0.3vw;
+  gap: 0.8vw;
   padding-right: 0.3vw;
   padding-left: 0.3vw;
   background: #ac32e4;
@@ -169,7 +168,6 @@
   border-radius: 1.5vw;
   height: 3.5vw;
   transform: translateZ(0);
-  border: 0;
   text-align: center;
   vertical-align: middle;
   letter-spacing: .1vw;
@@ -180,6 +178,13 @@
   & a {
     text-decoration: none;
     color: white;
+    font-size: 1vw;
+  }
+
+  svg {
+    margin-top: 0.5vw;
+    height: 1vw;
+    width: 1vw;
   }
 }
 
@@ -196,14 +201,6 @@
   line-height: 1.5vw;
   background-color: #fff;
   color: #ac32e4;
-}
-
-.arrow_icon {
-  margin-top: 0.6vw;
-}
-
-.pagin {
-  display: block;
 }
 
 
@@ -228,16 +225,24 @@
     font-size: 12px;
   }
   .btn_wrapp {
-
     margin-top: 30px;
-    width: 20%;
-    font-size: 10px;
+    width: 200px;
+    height: 44px;
     margin-bottom: 30px;
-    gap: 5px;
-    padding-right: 5px;
-    padding-left: 5px;
     border-radius: 22px;
-    height: 45px;
+    gap: 8px;
+
+    & a {
+      font-size: 13px;
+    }
+
+    & svg {
+      margin-top: 10px;
+      height: 10px;
+      width: 10px;
+
+    }
+
 
   }
 
@@ -245,8 +250,7 @@
     left: 7px;
     width: 30px;
     height: 30px;
-
-    line-height: 20px;
+    //line-height: 20px;
 
   }
   .description {
@@ -262,9 +266,7 @@
 
     }
   }
-  .arrow_icon {
-    margin-top: 10px;
-  }
+
   .card_footer {
     padding: 10px 30px;
 
@@ -308,9 +310,18 @@
     gap: 1vw;
     width: 45%;
     height: 7vw;
-    font-size: 2vw;
     margin-top: 5vw;
     margin-bottom: 5vw;
+
+    a {
+      font-size: 2vw;
+    }
+
+    svg {
+      margin-top: 1.3vw;
+      height: 1.5vw;
+      width: 1.5vw;
+    }
   }
   .circle {
     top: 50%;

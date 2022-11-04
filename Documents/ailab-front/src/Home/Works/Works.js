@@ -95,9 +95,9 @@ function Works() {
             </div>
             <div className={s.btn_wrapp}>
                 {/*<Pagination count={3} color="secondary" className={s.pagin}/>*/}
-                <Link to="/portfolio">посмотреть все работы</Link>
+                <Link to="/portfolio"> все работы</Link>
                 <i className={s.circle}>
-                    <FaArrowRight className={s.arrow_icon}/>
+                    <FaArrowRight/>
                 </i>
 
 

@@ -73,14 +73,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
+  gap: 8px;
   border-radius: 2vw;
   height: 4vw;
-  font-size: 1vw;
+  font-size: 0.8vw;
   background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
   color: #fff;
   position: relative;
-  letter-spacing: .1em;
+  letter-spacing: 0.1vw;
   cursor: pointer;
   z-index: 1;
   text-transform: uppercase;
@@ -89,20 +90,26 @@
   line-height: 5vw;
   padding: 0 1.5vw;
   border: none;
-  font-weight: bolder;
+
 }
 
 .circle {
-  display: block;
+  display: flex;
+  justify-content: center;
   left: 0.5vw;
   width: 2.3vw;
   height: 2.3vw;
   -webkit-transition: all 0.3s !important;
   transition: all 0.3s !important;
-  border-radius: 50%;
-  line-height: 2vw;
   background-color: #fff;
+  border-radius: 2vw;
   color: black;
+
+  svg {
+    height: 1vw;
+    width: 1vw;
+    margin-top: 0.5vw;
+  }
 }
 
 /* container2*/
@@ -210,18 +217,27 @@
   .btn_order {
     gap: 5px;
     border-radius: 27px;
-    height: 54px;
-    font-size: 14px;
-    line-height: 54px;
+    height: 44px;
+    width: 200px;
+    font-size: 13px;
+    color: white;
+    //line-height: 54px;
     padding: 0 15px;
+    letter-spacing: 1px;
+
 
   }
 
   .circle {
     left: 7px;
-    width: 31px;
-    height: 31px;
-    line-height: 30px;
+    width: 25px;
+    height: 25px;
+
+    svg {
+      margin-top: 5px;
+
+    }
+
 
   }
 
@@ -312,6 +328,7 @@
     font-size: 1.8vw;
     gap: 10px;
     padding: 3vw;
+
   }
 
   .container2 {
@@ -359,6 +376,8 @@
 
     svg {
       margin-top: 1vw;
+      height: 1.5vw;
+      width: 1.5vw;
     }
 
   }
@@ -393,5 +412,11 @@
   }
   .btn_order {
     gap: 5px;
+  }
+  .circle {
+    svg {
+      height: 1.5vw;
+      width: 1.5vw;
+    }
   }
 }
