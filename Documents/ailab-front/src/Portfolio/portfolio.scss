@@ -42,6 +42,27 @@
   text-transform: uppercase;
 }
 
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  font-size: 1.3vw;
+
+}
+
+.background_pagin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cdcdcd;
+  height: 2vw;
+  width: 2vw;
+
+}
+
 @media screen and (min-width: 1170px) {
   .active_button_all {
     padding: 10px 20px;
@@ -65,5 +86,21 @@
     padding: 10px 20px;
     margin-left: 10px;
 
+  }
+  .background_pagin {
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+  }
+  .pagination {
+    gap: 10px
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .background_pagin {
+    height: 5vw;
+    width: 5vw;
+    font-size: 2.5vw;
   }
 }

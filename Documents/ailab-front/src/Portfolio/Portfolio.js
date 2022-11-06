@@ -2,12 +2,13 @@ import s from "./Portfolio.module.scss";
 import "./portfolio.scss";
 import {Link} from "react-router-dom";
 import {AiOutlineHeart, AiOutlineUser} from "react-icons/ai";
+import {Pagination} from "./Pagination";
 import {useState} from "react";
 
 
 export const Portfolio = () => {
-    const [active, setActive] = useState("All")
-    const data = [
+    const [active, setActive] = useState("All");
+    const [works, setWorks] = useState([
 
         {
             image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -44,8 +45,50 @@ export const Portfolio = () => {
             caption: "Kyiv",
             category: "app",
             likes: 5
-        }
-    ]
+        },
+        {
+            image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            caption: "Scotland",
+            category: "app",
+            likes: 5
+        },
+        {
+            image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            caption: "Scotland",
+            category: "app",
+            likes: 5
+        },
+        {
+            image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            caption: "Scotland",
+            category: "app",
+            likes: 5
+        },
+
+    ]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [counterPage] = useState(6);
+
+    // useEffect(() => {
+    //     const getWorks = async () => {
+    //         setLoading(true);
+    //         const res = await axios.get('http://vhjjkkk')
+    //         setWorks(res.data);
+    //         setLoading(false)
+    //     }
+    //     getWorks();
+    //
+    // }, [])
+
+    const lastPageIndex = currentPage * counterPage;
+    const firstPageIndex = lastPageIndex - counterPage;
+    const currentWork = works.slice(firstPageIndex, lastPageIndex);
+
+    const pagination = pageNumber => {
+        setCurrentPage(pageNumber)
+    }
+
     return (
         <div className={s.container}>
             <div className={s.title}>
@@ -81,7 +124,7 @@ export const Portfolio = () => {
             </div>
 
             <div className={s.wrapp_works}>
-                {data.map(item => {
+                {currentWork.map(item => {
                     return (
                         <Link to="/info" className={s.card}>
                             <img src={item.image}/>
@@ -108,6 +151,7 @@ export const Portfolio = () => {
                 })}
 
             </div>
+            <Pagination counterPage={counterPage} totalWorks={works.length} pagination={pagination}/>
 
         </div>
     )
