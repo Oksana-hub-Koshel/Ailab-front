@@ -14,18 +14,19 @@
   margin-top: 3vw;
   padding-top: 2vw;
   padding-bottom: 5vw;
+
+  h3 {
+    font-size: 1.5vw;
+  }
 }
 
 .row {
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
   gap: 5vw;
-
-
 }
 
 .first_block {
@@ -35,13 +36,19 @@
 }
 
 .text {
-  text-align: justify;
+
+  font-size: 1vw;
 }
 
 .icons_contacts {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 1vw;
+
+  svg {
+    height: 1.5vw;
+    width: 1.5vw;
+  }
 }
 
 .icon_instagram_left {
@@ -60,19 +67,15 @@
 }
 
 .logo_image {
-  width: 40px;
-  height: 40px;
-  margin-top: 20px;
+  width: 9vw;
+  height: 3vw;
+  margin-top: 1vw;
 }
 
 .second_block {
   display: flex;
   flex-direction: column;
   margin-top: 2px;
-
-}
-
-.services_block {
 
 }
 
@@ -84,7 +87,7 @@
 }
 
 .second_block h3 {
-  border-bottom: 2px solid #b69d74;
+  border-bottom: 1px solid #b69d74;
 }
 
 .third_block {
@@ -92,11 +95,11 @@
 }
 
 .third_block h3 {
-  border-bottom: 2px solid #b69d74;
+  border-bottom: 1px solid #b69d74;
 }
 
 .fourth_block h3 {
-  border-bottom: 2px solid #b69d74;
+  border-bottom: 1px solid #b69d74;
 }
 
 .fourth_block {
@@ -125,9 +128,15 @@
 .phone_icon_and_text {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 0.5vw;
   cursor: pointer;
   align-items: center;
+  font-size: 1vw;
+
+  svg {
+    height: 1vw;
+    width: 1vw;
+  }
 }
 
 .icon_telephone {
@@ -138,9 +147,15 @@
 .insta_icon_and_text {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 0.5vw;
   cursor: pointer;
   align-items: center;
+  font-size: 1vw;
+
+  svg {
+    height: 1vw;
+    width: 1vw;
+  }
 }
 
 .icon_insta {
@@ -152,9 +167,15 @@
 .email_icon_and_text {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 0.5vw;
   cursor: pointer;
   align-items: center;
+  font-size: 1vw;
+
+  svg {
+    height: 1vw;
+    width: 1vw;
+  }
 
 
 }
@@ -175,12 +196,14 @@
   gap: 5px;
   align-items: center;
   cursor: pointer;
+  font-size: 1.2vw;
 
 }
 
 .links_items a {
   text-decoration: none;
-  color: white
+  color: white;
+  font-size: 1.2vw;
 }
 
 .copyrights {
@@ -210,17 +233,91 @@
   cursor: pointer;
 }
 
+.first_and_second_blocks {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw
+}
+
+.third_and_fourth_blocks {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw
+}
+
 @media screen and (min-width: 1170px) {
   .container {
     width: 1170px;
     margin-top: 30px;
     padding-top: 30px;
     padding-bottom: 50px;
+
+    h3 {
+      font-size: 18px;
+    }
   }
   .logo img {
     width: 110px;
     height: 60px;
     background-color: white;
+  }
+  .row {
+    gap: 80px
+  }
+
+  .text {
+    font-size: 14px;
+  }
+  .links_items {
+    font-size: 14px;
+
+  }
+  .links_items a {
+    font-size: 14px;
+  }
+  .phone_icon_and_text {
+    font-size: 14px;
+
+    svg {
+      height: 15px;
+      width: 15px;
+    }
+  }
+  .insta_icon_and_text {
+    font-size: 14px;
+
+    svg {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  .email_icon_and_text {
+    font-size: 14px;
+
+    svg {
+      height: 15px;
+      width: 15px;
+    }
+
+
+  }
+  .icons_contacts {
+    gap: 10px;
+
+    svg {
+      height: 15px;
+      width: 15px;
+    }
+  }
+  .first_and_second_blocks {
+
+    gap: 40px
+  }
+
+  .third_and_fourth_blocks {
+
+    gap: 40px
   }
 }
 
@@ -232,5 +329,75 @@
 }
 
 @media screen and (max-width: 550px) {
+  .row {
+    flex-direction: row;
+  }
+  .text {
+    font-size: 2vw;
+  }
+  .container {
+    h3 {
+      font-size: 3vw;
+    }
+  }
+  .links_items {
+    font-size: 2vw;
+
+    a {
+      font-size: 2vw;
+    }
+  }
+  .phone_icon_and_text {
+    font-size: 2vw;
+
+    svg {
+      height: 2vw;
+      width: 2vw;
+    }
+  }
+  .insta_icon_and_text {
+    font-size: 2vw;
+
+    svg {
+      height: 2vw;
+      width: 2vw;
+    }
+  }
+
+
+  .email_icon_and_text {
+    font-size: 2vw;
+
+    svg {
+      height: 2vw;
+      width: 2vw;
+    }
+  }
+  .logo_image {
+    height: 5vw;
+    width: 12vw;
+  }
+  .first_and_second_blocks {
+    display: flex;
+    flex-direction: row;
+    gap: 15vw
+  }
+  .first_block {
+    margin-top: 2vw;
+  }
+  .third_and_fourth_blocks {
+    display: flex;
+    flex-direction: row;
+    gap: 35vw
+  }
+  .icons_contacts {
+    gap: 2vw;
+
+    svg {
+      height: 2.5vw;
+      width: 2.5vw;
+    }
+  }
+
 
 }

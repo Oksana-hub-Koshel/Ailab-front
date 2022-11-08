@@ -2,47 +2,26 @@ import s from "./Works.module.scss"
 import {FaArrowRight, FaRegHeart} from "react-icons/fa";
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import axios from "axios";
+import {AiOutlineUser} from "react-icons/ai";
 
 
 function Works() {
-    const [photos, setPhotos] = useState([
+    const [card, setCard] = useState([]);
 
-            {
-                image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                caption: "Scotland",
-                author: "Willy Billy"
-            },
-            {
-                image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                caption: "Scotland",
-                author: "Willy Billy"
-            },
-            {
-                image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                caption: "Scotland",
-                author: "Willy Billy"
-            },
-            {
-                image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                caption: "Scotland",
-                author: "Willy Billy"
-            },
-            {
-                image: "https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                caption: "London",
-                author: "Willy Billy"
-            },
-            {
-                image: "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                caption: "San Francisco",
-                author: "Willy Billy"
-            }
+    useEffect(() => {
+        const getWorks = async () => {
+            const res = await axios.get('http://127.0.0.1:8000/api/portfolio/portfolio/')
+            setCard(res.data);
+        }
+        getWorks();
 
-        ]
-    );
+    }, [])
+    console.log(card)
+
 
     const scrollHandler = (e) => {
-        console.log('scroll')
+        // console.log('scroll')
     }
 
     useEffect(() => {
@@ -61,40 +40,42 @@ function Works() {
             </div>
 
             <div className={s.blocks}>
-                {photos.map(item => {
+
+
+                {card.map(item => {
                     return (
-
-                        <div className={s.block} key={item.id}>
-                            <a href="/portfolio"> <img src={item.image}/></a>
-                            <div className={s.description}>
-                                <p>{item.author}</p>
-                                <h3>{item.caption}</h3>
-                            </div>
-                            <div className={s.card_footer}>
-                                <div className={s.app}>
-                                    <a href="/">
-                                        Mobile Apps
-                                    </a>
+                        <Link to={`/info/${item.id}`} state={{from: `${item.id}`}} className={s.card}>
+                            <div className={s.block} key={item.id}>
+                                <div style={{backgroundImage: `url( ${item.image})`}} className={s.image}></div>
+                                <div className={s.description}>
+                                    <div className={s.author}>
+                                        <AiOutlineUser/>
+                                        Ai Lab
+                                    </div>
+                                    <h3>{item.title}</h3>
                                 </div>
-                                <div className={s.likes}>
-                                    <FaRegHeart className={s.icon_heart}/>
-                                    <p>12</p>
+                                <div className={s.card_footer}>
+                                    <div className={s.app}>
+                                        <a href="/">
+                                            {item.tags}
+                                        </a>
+                                    </div>
+                                    <div className={s.likes}>
+                                        <FaRegHeart className={s.icon_heart}/>
+                                        <p>{item.like}</p>
 
+                                    </div>
                                 </div>
 
+
                             </div>
-
-
-                        </div>
-
+                        </Link>
                     )
-
-
                 })}
+
 
             </div>
             <div className={s.btn_wrapp}>
-                {/*<Pagination count={3} color="secondary" className={s.pagin}/>*/}
                 <Link to="/portfolio">посмотреть все работы</Link>
                 <i className={s.circle}>
                     <FaArrowRight/>

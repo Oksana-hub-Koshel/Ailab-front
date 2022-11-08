@@ -111,7 +111,18 @@
   width: 32.5%;
   margin-bottom: 2vw;
   text-decoration: none;
+
+
 }
+
+.image {
+  width: 100%;
+  height: 20vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 
 .card_body {
   padding: 2vw;
@@ -197,6 +208,10 @@
 
 
   }
+  .image {
+    height: 300px;
+
+  }
   .title {
     height: 150px;
     padding-right: 15px;
@@ -278,6 +293,9 @@
     margin-left: auto;
 
   }
+  .image {
+    height: 30vw;
+  }
 
 }
 
@@ -286,8 +304,11 @@
     width: 100%;
 
   }
+  .image {
+    height: 60vw;
+  }
   .card_body {
-    gap: 1.5vw
+    gap: 3vw
   }
   .container {
     width: 86%;

@@ -2,9 +2,12 @@ import s from "./Blog.module.scss";
 import {Link} from "react-router-dom";
 import {BiMessage} from "react-icons/bi";
 import {BsClockHistory} from "react-icons/bs"
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 
 export const Blog = () => {
+    const [info, setInfo] = useState([]);
     const data = [
 
         {
@@ -86,6 +89,17 @@ export const Blog = () => {
             likes: 5
         }
     ]
+
+
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/api/posts/').then(response => {
+            console.log(response)
+            setInfo(response.data);
+        });
+
+    }, []);
+
+
     return (
         <div className={s.container}>
             <div className={s.title}>

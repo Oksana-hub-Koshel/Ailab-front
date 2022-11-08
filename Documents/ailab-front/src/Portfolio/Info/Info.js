@@ -1,105 +1,102 @@
-import s from "./Info.module.scss";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
+import {useEffect, useState} from "react";
+import axios from "axios";
 import {BsClockHistory, BsGrid} from "react-icons/bs";
 import {FaRegBookmark} from "react-icons/fa";
-import {AiOutlineHeart} from "react-icons/ai"
-import {useState} from "react";
+import s from "./Info.module.scss";
+import {AiOutlineHeart} from "react-icons/ai";
 
-export const Info = () => {
-    const [state, setState] = (useState([
 
-            {
-                image: "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                caption: "Scotland",
-                category: "app",
-                time: "25 октября 2022 г. 16:34",
-                description: "cgvhbjnkml",
-                likes: 10
-            },
+export const Info = (props) => {
+    const [state, setState] = useState(null);
+    const location = useLocation();
+    const {from} = location.state;
 
-        ]
-    ))
-
-    const data = [{time: "25 октября 2022 г. 16:34", category: "app",}]
+    console.log(state)
+    useEffect(() => {
+        if (from) {
+            axios.get(`http://127.0.0.1:8000/api/portfolio/portfolio/${from}`).then((response) => {
+                // console.log(response.data)
+                setState(response.data);
+            });
+        }
+    }, [from]);
 
 
     return (
+
         <div className={s.container}>
             <div className={s.title}>
-                <div className={s.title_center}>
-                    <div>
-                        <div className={s.breadcrump}>
-                            <div><Link to="/">Главная</Link></div>
-                            <div>/</div>
-                            <div><Link to="/portfolio">Портфолио</Link></div>
+                {state && (
+                    <div className={s.title_center}>
+                        <div>
+                            <div className={s.breadcrump}>
+                                <div><Link to="/">Главная</Link></div>
+                                <div>/</div>
+                                <div><Link to="/portfolio">Портфолио</Link></div>
+                                <div>/</div>
+                                <div><Link>{state.title}</Link></div>
+                            </div>
                         </div>
-                    </div>
-                    <h1>Photo</h1>
-                </div>
-            </div>
 
+                        <h1>{state.title}</h1>
+                    </div>
+                )}
+            </div>
 
             <div className={s.content}>
-                <div className={s.left_side}>
-                    <div className={s.info}>
-                        {data.map(item => {
-                            return (
-                                <>
-                                    <div className={s.info_left}>
-                                        <BsClockHistory/>
-                                        <div>{item.time}</div>
-                                    </div>
-                                    <div className={s.info_right}>
-                                        <FaRegBookmark/>
-                                        <div>{item.category}</div>
-                                    </div>
-                                </>
-                            )
-                        })}
+                {state && (
+                    <>
+                        <div className={s.left_side}>
 
-
-                    </div>
-                    {state.map(item => {
-                        return (
-                            <img src={item.image} className={s.foto}/>)
-                    })
-                    }
-
-                </div>
-                {state.map(item => {
-                    return (
-                        <div className={s.right_side}>
-                            <h2>{item.caption}</h2>
-                            <div className={s.descrip}>
-                                {item.description}
+                            <div className={s.info}>
+                                <div className={s.info_left}>
+                                    <BsClockHistory/>
+                                    <div className={s.data}>{state.date}</div>
+                                </div>
+                                <div className={s.info_right}>
+                                    <FaRegBookmark/>
+                                    <div>{state.tags}</div>
+                                </div>
+                            </div>
+                            <div>
+                                <img src={state.image} className={s.foto}/>
                             </div>
                         </div>
-                    )
-                })
+                        <div className={s.right_side}>
+                            <h2>{state.title}</h2>
+                            <div className={s.descrip}>{state.content}</div>
+                        </div>
+                    </>
+                )}
 
-                }
-
-
-            </div>
-            <div className={s.line_likes}>
-                {state.map(item => {
-                    return (
-                        <>
-                            <div></div>
-                            <div className={s.likes}>
-                                <AiOutlineHeart/>
-                                <p>{item.likes}</p>
-                            </div>
-                        </>
-                    )
-                })}
 
             </div>
-            <div className={s.btn_catalog}>
-                <Link to="/portfolio" className={s.btn_background}>
-                    <BsGrid/>
-                </Link>
-            </div>
+            {state && (
+                <>
+
+                    <div className={s.line_likes}>
+                        <div></div>
+                        <div className={s.likes}><AiOutlineHeart/><p>{state.like}</p></div>
+                    </div>
+
+
+                    <div className={s.btn_catalog}>
+                        <Link to="/portfolio" className={s.btn_background}><BsGrid/></Link>
+                    </div>
+                </>
+            )}
+
         </div>
+
     )
 }
+
+
+
+
+
+
+
+
+

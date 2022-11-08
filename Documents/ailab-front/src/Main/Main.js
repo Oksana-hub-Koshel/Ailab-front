@@ -19,6 +19,7 @@ export const Main = () => {
                 <Route path="/blog" element={<Blog/>}/>
                 <Route path="/info" element={<Info/>}/>
                 <Route path="*" element={<NoPage/>}/>
+                <Route path="/info/:id" element={<Info/>}/>
 
             </Routes>
             <Footer/>

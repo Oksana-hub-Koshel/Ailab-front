@@ -1,11 +1,10 @@
 import s from "./Order.module.scss";
 import hero from "./../../Data/HomePage/hero.png"
 import {HiOutlineArrowDown} from "react-icons/hi";
-import $ from "jquery";
 import Typed from "react-typed";
 import {Modal} from "../../Modal/Modal";
 import {useState} from "react";
-
+import $ from "jquery";
 
 $(function () {
     const target_block = $(".number"); // Ищем блок
@@ -132,19 +131,6 @@ $(function () {
 
 });
 
-$(function () {
-
-    $("#typing").typed({
-        strings: [" В Африке гориллы.", " В Африке большие.", " Злые крокодилы."],
-        typeSpeed: 70,
-        backDelay: 1500,
-        startDelay: 2500,
-        loop: true,
-        loopCount: 2,
-        contentType: 'html',
-    });
-
-});
 
 export const Order = () => {
     const [modalActive, setModalActive] = useState(false);

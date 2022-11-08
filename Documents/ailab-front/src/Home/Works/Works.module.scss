@@ -41,7 +41,7 @@
 }
 
 .block {
-  width: 32%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -50,13 +50,15 @@
   background-color: #fff;
   background-clip: border-box;
 
-  img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-  }
 
+}
 
+.image {
+  width: 100%;
+  height: 18vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 
@@ -82,6 +84,7 @@
     color: #343b43;
     font-weight: 900;
     letter-spacing: .021vw;
+    margin-bottom: 1vw;
   }
 }
 
@@ -91,7 +94,7 @@
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  padding: 1vw 1.5vw;
+  padding: 0.8vw 1.5vw;
   background-color: #fff;
   border-top: 1px solid #e7e7e7;
 
@@ -104,32 +107,35 @@
   gap: 5px;
   align-items: center;
   color: rgba(140, 140, 140, 0.75);
-  font-size: 1.5vw;
+
   font-weight: 600;
+
+  p {
+    font-size: 1vw;
+  }
 }
 
 .icon_heart {
   color: red;
-  height: 16px;
-  width: 14px;
-  margin-top: 2px;
+  height: 1vw;
+  width: 1vw;
+  margin-top: 0.1vw;
 }
 
 .app {
-  display: inline-block;
+  display: flex;
   position: relative;
   margin-top: 0.3125vw;
   margin-right: 0.375vw;
   margin-bottom: 0.3125vw;
-  padding: 0.3125vw 0.75vw;
-  -webkit-transition: color .25s;
-  transition: color .25s;
+  padding: 0.8vw 0.75vw;
   background-color: #fff;
   color: #404040;
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 0.75vw 1.25vw 0.0625vw rgb(223, 218, 218);
   z-index: 1;
+
 
   &:hover {
     background: linear-gradient(to right, #ac32e4 0%, #ac32e4 20%, #e833b0 100%) !important;
@@ -203,6 +209,28 @@
   color: #ac32e4;
 }
 
+.author {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+  align-items: center;
+  color: rgba(140, 140, 140, 0.75);
+  font-size: 1.2vw;
+  font-weight: 600;
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  margin-bottom: 2vw;
+  text-decoration: none;
+
+
+}
+
 
 @media screen and (min-width: 1170px) {
   .container {
@@ -213,6 +241,13 @@
   .blocks {
     gap: 20px;
     row-gap: 40px;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+  .image {
+    height: 250px;
+
   }
   .app {
     margin-top: 5px;
@@ -265,6 +300,7 @@
 
     h3 {
       font-size: 18px;
+      margin-bottom: 20px;
 
     }
   }
@@ -275,7 +311,10 @@
 
   }
   .likes {
-    font-size: 12px;
+    p {
+      font-size: 12px;
+    }
+
   }
   .title {
     h2 {
@@ -292,12 +331,52 @@
 
     }
   }
+  .icon_heart {
+    height: 14px;
+    width: 13px;
+    margin-top: 2px;
+  }
+  .author {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    gap: 10px
+  }
+
 }
 
 @media screen and (max-width: 970px) {
-  .block {
+
+
+  .image {
+    height: 27vw;
+
+  }
+  .card {
     width: 49%;
   }
+  .card_footer {
+    padding: 1.5vw;
+  }
+  .author {
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+  }
+  .description h3 {
+    font-size: 2vw;
+  }
+  .icon_heart {
+
+    height: 1.5vw;
+    width: 1.5vw;
+
+  }
+  .likes {
+    p {
+      font-size: 1.5vw;
+    }
+  }
+
 }
 
 @media screen and (max-width: 550px) {
@@ -305,6 +384,9 @@
     display: block;
   }
   .block {
+    width: 100%;
+  }
+  .card {
     width: 100%;
   }
   .btn_wrapp {
@@ -356,7 +438,7 @@
     }
 
     h3 {
-      font-size: 3vw;
+      font-size: 3.5vw;
 
     }
   }
@@ -364,7 +446,7 @@
     padding: 0.8vw 0.8vw;
   }
   .app a {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
   .card_footer {
     padding: 1.5vw 2vw;
@@ -372,4 +454,20 @@
   .likes p {
     font-size: 2.5vw;
   }
+  .image {
+    height: 60vw;
+  }
+  .icon_heart {
+    height: 2.5vw;
+    width: 2.5vw;
+
+  }
+  .author {
+    gap: 1vw;
+    font-size: 2.5vw;
+
+    margin-top: 2vw;
+    margin-bottom: 1.5vw;
+  }
+
 }
