@@ -41,7 +41,7 @@
 }
 
 .block {
-  width: 100%;
+  width: 32.5%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -224,8 +224,8 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 32%;
-  margin-bottom: 2vw;
+  width: 100%;
+  margin-bottom: 1vw;
   text-decoration: none;
 
 
@@ -243,7 +243,7 @@
     row-gap: 40px;
   }
   .card {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
   }
   .image {
     height: 250px;
@@ -342,6 +342,9 @@
     margin-bottom: 10px;
     gap: 10px
   }
+  .block {
+    width: 32%;
+  }
 
 }
 
@@ -352,8 +355,11 @@
     height: 27vw;
 
   }
-  .card {
+  .block {
     width: 49%;
+  }
+  .card {
+    width: 100%;
   }
   .card_footer {
     padding: 1.5vw;

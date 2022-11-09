@@ -56,7 +56,7 @@ export const Info = (props) => {
                                 </div>
                                 <div className={s.info_right}>
                                     <FaRegBookmark/>
-                                    <div>{state.tags}</div>
+                                    <div>{state.tags.title}</div>
                                 </div>
                             </div>
                             <div>
@@ -65,7 +65,14 @@ export const Info = (props) => {
                         </div>
                         <div className={s.right_side}>
                             <h2>{state.title}</h2>
-                            <div className={s.descrip}>{state.content}</div>
+                            {state.content.map(elem => {
+                                return (
+                                    <div className={s.descrip} dangerouslySetInnerHTML={{__html: elem.description}}/>
+                                )
+
+                            })}
+
+
                         </div>
                     </>
                 )}

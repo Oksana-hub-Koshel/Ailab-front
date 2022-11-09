@@ -20,6 +20,14 @@ function Works() {
     console.log(card)
 
 
+    const likeButtonHandler = (id) => {
+        setCard(
+            card.map((item) => item.id === id ? {...item, like: item.like + 1} : item
+            )
+        )
+    }
+
+
     const scrollHandler = (e) => {
         // console.log('scroll')
     }
@@ -44,32 +52,33 @@ function Works() {
 
                 {card.map(item => {
                     return (
-                        <Link to={`/info/${item.id}`} state={{from: `${item.id}`}} className={s.card}>
-                            <div className={s.block} key={item.id}>
+                        <div className={s.block} key={item.id}>
+                            <Link to={`/info/${item.id}`} state={{from: `${item.id}`}} className={s.card}>
                                 <div style={{backgroundImage: `url( ${item.image})`}} className={s.image}></div>
-                                <div className={s.description}>
-                                    <div className={s.author}>
-                                        <AiOutlineUser/>
-                                        Ai Lab
-                                    </div>
-                                    <h3>{item.title}</h3>
+                            </Link>
+                            <div className={s.description}>
+                                <div className={s.author}>
+                                    <AiOutlineUser/>
+                                    Ai Lab
                                 </div>
-                                <div className={s.card_footer}>
-                                    <div className={s.app}>
-                                        <a href="/">
-                                            {item.tags}
-                                        </a>
-                                    </div>
-                                    <div className={s.likes}>
-                                        <FaRegHeart className={s.icon_heart}/>
-                                        <p>{item.like}</p>
-
-                                    </div>
-                                </div>
-
-
+                                <h3>{item.title}</h3>
                             </div>
-                        </Link>
+                            <div className={s.card_footer}>
+                                <div className={s.app}>
+                                    <a href="/">
+                                        {item.tags.title}
+                                    </a>
+                                </div>
+                                <div className={s.likes} onClick={() => likeButtonHandler(item.id)}>
+                                    <FaRegHeart className={s.icon_heart}/>
+                                    <p>{item.like}</p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
                     )
                 })}
 

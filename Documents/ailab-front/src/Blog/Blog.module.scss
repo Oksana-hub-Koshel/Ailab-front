@@ -110,8 +110,12 @@
   }
 }
 
-.image_block img {
+.image {
   width: 100%;
+  height: 27vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card_body {
@@ -341,6 +345,10 @@
 
     }
   }
+  .image {
+    height: 350px;
+
+  }
 
 }
 
@@ -389,6 +397,9 @@
     span {
       font-size: 2vw;
     }
+  }
+  .image {
+    height: 60vw;
   }
 }
 
