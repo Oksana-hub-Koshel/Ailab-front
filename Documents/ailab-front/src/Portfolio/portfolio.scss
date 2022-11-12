@@ -63,6 +63,18 @@
 
 }
 
+.heart_icon {
+  color: red;
+}
+
+.heart_icon_press {
+  background-color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 1170px) {
   .active_button_all {
     padding: 10px 20px;

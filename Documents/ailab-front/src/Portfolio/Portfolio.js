@@ -1,37 +1,42 @@
 import s from "./Portfolio.module.scss";
 import "./portfolio.scss";
 import {Link} from "react-router-dom";
-import {AiOutlineHeart, AiOutlineUser} from "react-icons/ai";
 import {Pagination} from "./Pagination";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {PortfolioBlocks} from "./Portfolio_blocks/PortfolioBlocks";
+import {PortfolioBlocksApp} from "./Portfolio_blocks/PortfolioBlocksApp";
 
 
 export const Portfolio = () => {
-    const [active, setActive] = useState("All");
+    const [active, setActive] = useState("all");
+    const [app, setApp] = useState([]);
     const [works, setWorks] = useState([]);
-    const [likes, setLikes] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [like, setLike] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [counterPage] = useState(6);
 
-
+    console.log(app)
     const likeButtonHandler = (id) => {
         setWorks(
-            works.map((item) => item.id === id ? {...item, like: item.like + 1} : item
+            works.map((item) => item.id === id ? {...item, like: item.like + 1,} : item,
             )
         )
     }
 
 
     useEffect(() => {
-        const getWorks = async () => {
-            setLoading(true);
-            const res = await axios.get('http://127.0.0.1:8000/api/portfolio/portfolio/')
-            setWorks(res.data);
-            setLoading(false)
-        }
-        getWorks();
+
+        axios.get('http://127.0.0.1:8000/api/portfolio/portfolio/').then(response => {
+            setWorks(response.data);
+            setLike(response.data.map(item => {
+                return item.like
+            }))
+        });
+        axios.get('http://127.0.0.1:8000/api/portfolio/portfolio-app/').then(response => {
+            setApp(response.data);
+        });
+
 
     }, [])
 
@@ -60,62 +65,25 @@ export const Portfolio = () => {
             </div>
 
             <div className={s.list}>
-                <div className={s.item}>
-                    {/*<div className={s.item} onClick={e => SetOptions(e.target.value, 'All')}>*/}
-
-                    <a onClick={() => setActive('All')}
-                       className={` active_button_all ${active === 'All' ? 'active_button_all' : 'no_active_app'}`}>все
+                <div className={s.item} onClick={() => setActive("all")}>
+                    <a className={`${active === 'all' ? 'active_button_all' : 'no_active_app'}`}>все
                         <sup>1</sup>
                     </a>
 
                 </div>
 
-                <div className={s.item}>
-                    {/*<div className={s.item} onClick={e => SetOptions(e.target.value, 'App')}>*/}
-
-                    <a onClick={() => setActive('App')}
-                       className={`${active === 'App' ? 'active_button_app' : 'no_active_all'} `}>app
+                <div className={s.item} onClick={() => setActive('app')}>
+                    <a className={`${active === 'app' ? 'active_button_app' : 'no_active_all'} `}>app
                         <sup>1</sup></a>
 
                 </div>
             </div>
-
             <div className={s.wrapp_works}>
-                {currentWork.map(item => {
-                    console.log(item)
-                    return (
-                        <>
-                            <div className={s.card_with_body}>
-                                <Link to={`/info/${item.id}`} state={{from: `${item.id}`}} className={s.card}
-                                      key={item.id}>
-                                    <div style={{backgroundImage: `url( ${item.image})`}} className={s.image}></div>
-                                </Link>
-                                <div className={s.card_body}>
-                                    <div className={s.portfolio_meta}>
-                                        <div className={s.author}>
-                                            <AiOutlineUser/>
-                                            Ai Lab
-                                        </div>
-                                        <div className={s.likes} onClick={() => likeButtonHandler(item.id)}>
-                                            <AiOutlineHeart className={s.heart_icon}/>
-                                            {item.like}
-
-
-                                        </div>
-                                    </div>
-                                    <div className={s.card_title}>{item.title}</div>
-                                    <div className={s.item_category}>
-                                        <a>{item.tags.title}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </>
-
-
-                    )
-                })}
-
+                {active === "all" ?
+                    <PortfolioBlocks currentWork={currentWork} likeButtonHandler={likeButtonHandler} like={like}/> :
+                    <PortfolioBlocksApp app={app} likeButtonHandler={likeButtonHandler}/>}
             </div>
+
             <Pagination counterPage={counterPage} totalWorks={works.length} pagination={pagination}/>
 
         </div>

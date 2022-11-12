@@ -11,7 +11,7 @@ function Works() {
 
     useEffect(() => {
         const getWorks = async () => {
-            const res = await axios.get('http://127.0.0.1:8000/api/portfolio/portfolio/')
+            const res = await axios.get('http://127.0.0.1:8000/api/portfolio/portfolio-index/')
             setCard(res.data);
         }
         getWorks();
