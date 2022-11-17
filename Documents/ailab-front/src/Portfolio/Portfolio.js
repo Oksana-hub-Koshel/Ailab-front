@@ -2,7 +2,7 @@ import s from "./Portfolio.module.scss";
 import "./portfolio.scss";
 import {Link} from "react-router-dom";
 import {Pagination} from "./Pagination";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import axios from "axios";
 import {PortfolioBlocks} from "./Portfolio_blocks/PortfolioBlocks";
 import {PortfolioBlocksApp} from "./Portfolio_blocks/PortfolioBlocksApp";
@@ -16,13 +16,56 @@ export const Portfolio = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [counterPage] = useState(6);
 
-    console.log(app)
-    const likeButtonHandler = (id) => {
-        setWorks(
-            works.map((item) => item.id === id ? {...item, like: item.like + 1,} : item,
-            )
-        )
-    }
+
+    const likeButtonHandler = useCallback(
+        (id, pressLike) => {
+            if (pressLike) {
+                axios({
+                    method: 'GET',
+                    url: `http://127.0.0.1:8000/api/portfolio/like/${id}/add_like/`,
+                }).then(response => {
+                    console.log(response)
+                    if (response) {
+
+                        setWorks(
+                            works.map((item) => item.id === id ? {
+                                    ...item,
+                                    likes: item.likes + 1,
+                                } : item
+                            )
+                        )
+                        setApp(
+                            app.map((elem) => elem.id === id ? {...elem, likes: elem.likes + 1,} : elem,
+                            ))
+                    } else alert("Error")
+
+                });
+            } else if (!pressLike) {
+                axios({
+                    method: 'GET',
+                    url: `http://127.0.0.1:8000/api/portfolio/dislike/${id}/remove_like/`,
+                }).then(response => {
+                    if (response) {
+                        setWorks(
+                            works.map((item) => item.id === id ? {
+                                    ...item,
+                                    likes: item.likes - 1,
+                                } : item
+                            )
+                        )
+                        setApp(
+                            app.map((elem) => elem.id === id ? {...elem, likes: elem.likes - 1,} : elem,
+                            ))
+                    } else alert("Error")
+
+
+                })
+            }
+
+
+        },
+        [works, app]
+    );
 
 
     useEffect(() => {
@@ -30,13 +73,12 @@ export const Portfolio = () => {
         axios.get('http://127.0.0.1:8000/api/portfolio/portfolio/').then(response => {
             setWorks(response.data);
             setLike(response.data.map(item => {
-                return item.like
+                return item.likes
             }))
         });
         axios.get('http://127.0.0.1:8000/api/portfolio/portfolio-app/').then(response => {
             setApp(response.data);
-        });
-
+        })
 
     }, [])
 
@@ -78,11 +120,39 @@ export const Portfolio = () => {
 
                 </div>
             </div>
+
             <div className={s.wrapp_works}>
-                {active === "all" ?
-                    <PortfolioBlocks currentWork={currentWork} likeButtonHandler={likeButtonHandler} like={like}/> :
-                    <PortfolioBlocksApp app={app} likeButtonHandler={likeButtonHandler}/>}
+                <>
+
+                    {active === "all" ?
+                        <>
+                            {currentWork.map(item => {
+                                return (
+                                    <PortfolioBlocks currentWork={currentWork} likeButtonHandler={likeButtonHandler}
+                                                     likes={item.likes}
+                                                     id={item.id} image={item.image} title={item.title}
+                                                     category={item.tags.title}/>
+
+                                )
+                            })}
+                        </> :
+                        <>
+
+                            {app.map(elem => {
+                                return (
+                                    <PortfolioBlocksApp app={app} likeButtonHandler={likeButtonHandler} id={elem.id}
+                                                        image={elem.image} likes={elem.likes} title={elem.title}
+                                                        category={elem.tags.title}/>
+                                )
+                            })
+                            }
+                        </>
+                    }
+
+
+                </>
             </div>
+
 
             <Pagination counterPage={counterPage} totalWorks={works.length} pagination={pagination}/>
 

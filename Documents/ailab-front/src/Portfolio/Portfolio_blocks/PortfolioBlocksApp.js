@@ -1,56 +1,48 @@
 import s from "../Portfolio.module.scss";
 import "../portfolio.scss";
 import {Link} from "react-router-dom";
-import {AiOutlineHeart, AiOutlineUser} from "react-icons/ai";
+import {AiOutlineUser} from "react-icons/ai";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import {useState} from "react";
 
-export const PortfolioBlocksApp = ({app, likeButtonHandler}) => {
-    const [pressLike, setPressLike] = useState(false);
-
+export const PortfolioBlocksApp = ({likeButtonHandler, id, image, likes, title, category}) => {
+    const [pressLike, setPressLike] = useState(true);
     return (
-        <>
-            {app.map(item => {
-                return (
-                    <>
-                        <div className={s.card_with_body} key={item.id}>
-                            <Link to={`/info/${item.id}`} state={{from: `${item.id}`}} className={s.card}
-                                  key={item.id}>
-                                <div style={{backgroundImage: `url( ${item.image})`}}
-                                     className={s.image}></div>
-                            </Link>
 
-                            <div className={s.card_body}>
-                                <div className={s.portfolio_meta}>
-                                    <div className={s.author}>
-                                        <AiOutlineUser/>
-                                        Ai Lab
-                                    </div>
+        <div className={s.card_with_body} key={id}>
+            <Link to={`/info/${id}`} state={{from: `${id}`}} className={s.card}
+                  key={id}>
+                <div style={{backgroundImage: `url( ${image})`}}
+                     className={s.image}></div>
+            </Link>
 
-                                    <div className={s.likes} onClick={() => likeButtonHandler(item.id)}>
-                                        <AiOutlineHeart
-                                            className={`${pressLike === true ? `heart_icon_press` : `heart_icon`}`}/>
-                                        {item.like}
+            <div className={s.card_body}>
+                <div className={s.portfolio_meta}>
+                    <div className={s.author}>
+                        <AiOutlineUser/>
+                        Ai Lab
+                    </div>
 
-                                    </div>
+                    <div className={s.likes} onClick={() => likeButtonHandler(id, pressLike)}>
+                        <FavoriteIcon onClick={() => setPressLike(!pressLike)}
+                                      className={!pressLike ? s.heart_icon_press : s.heart_icon}
+
+                        />
+                        {likes}
 
 
-                                </div>
-                                <div className={s.card_title}>{item.title}</div>
-                                <div className={s.item_category}>
-                                    <a>{item.tags.title}</a>
-                                </div>
-                            </div>
+                    </div>
 
 
-                        </div>
+                </div>
+                <div className={s.card_title}>{title}</div>
+                <div className={s.item_category}>
+                    <a>{category}</a>
+                </div>
+            </div>
 
-                    </>
 
-
-                )
-            })}
-        </>
-
+        </div>
 
     )
 }
