@@ -4,14 +4,34 @@ import {Link} from "react-router-dom";
 import {AiOutlineUser} from "react-icons/ai";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import {useState} from "react";
+import axios from "axios";
 
 
 export const PortfolioBlocks = ({likeButtonHandler, likes, id, image, title, category}) => {
     const [pressLike, setPressLike] = useState(true);
+    const [addView, setAddView] = useState(null)
+
+    const watchView = () => {
+        axios.get(`http://127.0.0.1:8000/api/portfolio/view/${id}/add_view/`).then((response) => {
+                if (response) {
+                    setAddView(response.data);
+                    setAddView(
+                        addView.map((item) => item.id === id ? {
+                                ...item,
+                                views: item.views + 1,
+                            } : item
+                        )
+                    )
+                }
+            }
+        );
+
+    }
+
     return (
         <div className={s.card_with_body} key={id}>
             <Link to={`/info/${id}`} state={{from: `${id}`}} className={s.card}
-                  key={id}>
+                  key={id} onClick={() => watchView(id)}>
                 <div style={{backgroundImage: `url( ${image})`}}
                      className={s.image}></div>
             </Link>

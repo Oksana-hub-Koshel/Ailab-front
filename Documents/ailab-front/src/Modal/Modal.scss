@@ -171,7 +171,8 @@ input:focus:-ms-input-placeholder {
   font-size: 1vw;
   color: red;
   height: 1vw;
-  margin-left: 1vw;
+  margin-left: 1.3vw;
+  margin-bottom: 0.5vw;
 }
 
 .label {
@@ -315,6 +316,7 @@ input:focus:-ms-input-placeholder {
     font-size: 12px;
     height: 10px;
     margin-left: 20px;
+    margin-bottom: 5px;
   }
 }
 

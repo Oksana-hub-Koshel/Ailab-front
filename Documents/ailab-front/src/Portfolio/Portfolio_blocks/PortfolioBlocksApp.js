@@ -6,7 +6,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import {useState} from "react";
 
 export const PortfolioBlocksApp = ({likeButtonHandler, id, image, likes, title, category}) => {
-    const [pressLike, setPressLike] = useState(true);
+    const [pressLike, setPressLike] = useState(false);
     return (
 
         <div className={s.card_with_body} key={id}>

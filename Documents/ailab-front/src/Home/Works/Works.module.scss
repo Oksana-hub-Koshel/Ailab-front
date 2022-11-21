@@ -41,7 +41,7 @@
 }
 
 .block {
-  width: 32.5%;
+  width: 32%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -115,11 +115,17 @@
   }
 }
 
-.icon_heart {
-  color: red;
+.heart_icon {
+  color: rgba(140, 140, 140, 0.75);
   height: 1vw;
   width: 1vw;
   margin-top: 0.1vw;
+}
+
+.heart_icon_press {
+  color: red;
+  height: 1vw;
+  width: 1vw;
 }
 
 .app {
@@ -331,17 +337,24 @@
 
     }
   }
-  .icon_heart {
+  .heart_icon {
     height: 14px;
     width: 13px;
     margin-top: 2px;
   }
+  .heart_icon_press {
+    height: 14px;
+    width: 13px;
+  }
+
+
   .author {
     font-size: 16px;
     margin-top: 20px;
     margin-bottom: 10px;
     gap: 10px
   }
+
   .block {
     width: 32%;
   }
@@ -371,10 +384,36 @@
   .description h3 {
     font-size: 2vw;
   }
-  .icon_heart {
-
+  .heart_icon {
     height: 1.5vw;
     width: 1.5vw;
+
+  }
+  .heart_icon_press {
+    height: 1.5vw;
+    width: 1.5vw;
+
+  }
+  .btn_wrapp {
+
+    width: 33%;
+    height: 4.5vw;
+
+    a {
+      font-size: 1.4vw;
+    }
+
+    svg {
+      height: 1.3vw;
+      width: 1.3vw;
+      margin-top: 0.8vw;
+    }
+
+  }
+  .circle {
+    top: 50%;
+    width: 3vw;
+    height: 3vw;
 
   }
   .likes {
@@ -463,7 +502,12 @@
   .image {
     height: 60vw;
   }
-  .icon_heart {
+  .heart_icon {
+    height: 2.5vw;
+    width: 2.5vw;
+
+  }
+  .heart_icon_press {
     height: 2.5vw;
     width: 2.5vw;
 

@@ -16,7 +16,6 @@ export const Info = (props) => {
     useEffect(() => {
         if (from) {
             axios.get(`http://127.0.0.1:8000/api/portfolio/portfolio/${from}`).then((response) => {
-                // console.log(response.data)
                 setState(response.data);
             });
         }
@@ -56,7 +55,8 @@ export const Info = (props) => {
                                 </div>
                                 <div className={s.info_right}>
                                     <FaRegBookmark/>
-                                    <div>{state.tags.title}</div>
+                                    <div>{state.views}</div>
+
                                 </div>
                             </div>
                             <div>
@@ -84,7 +84,7 @@ export const Info = (props) => {
 
                     <div className={s.line_likes}>
                         <div></div>
-                        <div className={s.likes}><AiOutlineHeart/><p>{state.like}</p></div>
+                        <div className={s.likes}><AiOutlineHeart/><p>{state.likes}</p></div>
                     </div>
 
 

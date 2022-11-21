@@ -72,9 +72,7 @@ export const Portfolio = () => {
 
         axios.get('http://127.0.0.1:8000/api/portfolio/portfolio/').then(response => {
             setWorks(response.data);
-            setLike(response.data.map(item => {
-                return item.likes
-            }))
+
         });
         axios.get('http://127.0.0.1:8000/api/portfolio/portfolio-app/').then(response => {
             setApp(response.data);

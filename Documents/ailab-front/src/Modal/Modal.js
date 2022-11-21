@@ -1,18 +1,33 @@
 import {useForm} from "react-hook-form";
-import {useState} from "react";
 import "./Modal.scss";
 import {AiOutlineClose} from "react-icons/ai";
+import axios from "axios";
 
 
 export const Modal = ({active, setActive}) => {
-    const [isDisabled, setIsDisabled] = useState(false);
-    const [show, setShow] = useState(false)
 
     const {
         register,
         formState: {errors, isValid},
         handleSubmit,
     } = useForm({mode: 'onBlur'});
+
+    const handleData = (e) => {
+        axios({
+            method: 'post',
+            url: 'http://127.0.0.1:8000/api/index/contact/',
+            headers: {},
+            data: {
+                fio: e.username,
+                phone: e.phone,
+                message: e.description,
+                category: e.category
+            },
+        }).then(() => {
+            setActive(false);
+        });
+
+    }
 
 
     return (
@@ -32,7 +47,7 @@ export const Modal = ({active, setActive}) => {
                 <div className="content_window">
                     <div className="left_side">
 
-                        <form className="form" autoComplete="off">
+                        <form className="form" autoComplete="off" onSubmit={handleSubmit(handleData)}>
                             <div className="inp_input1">
                                 <label className="label">ФИО</label>
                                 <input
@@ -47,7 +62,7 @@ export const Modal = ({active, setActive}) => {
                                 <label className="label">Номер телефона</label>
                                 <input
                                     className="inp_field1"
-                                    {...register('telephone', {
+                                    {...register('phone', {
                                         required: 'Поле обязательно',
                                     })}
                                 />
@@ -64,16 +79,15 @@ export const Modal = ({active, setActive}) => {
 
 
                             <div className="conditions">
-                                <select    {...register('agree', {required: true})}>
-                                    <option value="front">Разработка сайта</option>
-                                    <option value="front">Разработка сайта</option>
-                                    <option value="front">Разработка сайта</option>
+                                <select    {...register('category', {required: true})}>
+                                    <option value="web-develop">Разработка сайта</option>
+                                    <option value="back-develop">Разработка сайта</option>
+                                    <option value="design">Разработка сайта</option>
                                 </select>
 
 
                             </div>
                             <button className="send" type="submit">
-
                                 Отправить
                             </button>
                         </form>
