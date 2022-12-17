@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Ailab-front/static/css/main.2147fde1.css",
+    "main.js": "/Ailab-front/static/js/main.e311e213.js",
+    "static/js/787.9e41ec76.chunk.js": "/Ailab-front/static/js/787.9e41ec76.chunk.js",
+    "static/media/02.jpg": "/Ailab-front/static/media/02.3a0da699bac44d723c72.jpg",
+    "static/media/06.jpg": "/Ailab-front/static/media/06.ae7d7a2d1e62ef6c1954.jpg",
+    "static/media/05.jpg": "/Ailab-front/static/media/05.feb87c3ec8bd5a2ed389.jpg",
+    "static/media/03.jpg": "/Ailab-front/static/media/03.ebe8f62092208330f7af.jpg",
+    "static/media/04.jpg": "/Ailab-front/static/media/04.b66dd19bca0862f053cd.jpg",
+    "static/media/hero-bg.png": "/Ailab-front/static/media/hero-bg.30bd866cdfb3b9c88810.png",
+    "static/media/01.jpg": "/Ailab-front/static/media/01.6b8ad86b1bd83f1db34a.jpg",
+    "static/media/steps-bg.jpg": "/Ailab-front/static/media/steps-bg.12aad4b8bb650a674e8d.jpg",
+    "static/media/hero.png": "/Ailab-front/static/media/hero.f85eab30a32688595b09.png",
+    "static/media/portfolio-pattern.png": "/Ailab-front/static/media/portfolio-pattern.b47d56b9736ac8332b41.png",
+    "static/media/logo-dark.svg": "/Ailab-front/static/media/logo-dark.09ea54cf44ef6ffbf6e0324d4bd8c823.svg",
+    "static/media/ui-design.svg": "/Ailab-front/static/media/ui-design.a59ead285047c6f7516214e72132e22d.svg",
+    "static/media/user-data.svg": "/Ailab-front/static/media/user-data.036e2169b509a681db2f9517ab6aa160.svg",
+    "static/media/coding.svg": "/Ailab-front/static/media/coding.be3a5377a6c4a40988594a8ee2437c58.svg",
+    "index.html": "/Ailab-front/index.html",
+    "main.2147fde1.css.map": "/Ailab-front/static/css/main.2147fde1.css.map",
+    "main.e311e213.js.map": "/Ailab-front/static/js/main.e311e213.js.map",
+    "787.9e41ec76.chunk.js.map": "/Ailab-front/static/js/787.9e41ec76.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2147fde1.css",
+    "static/js/main.e311e213.js"
+  ]
+}
